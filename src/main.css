@@ -13,6 +13,7 @@
     url(./assets/fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
   font-display: swap;
 }
+
 :root {
   color-scheme: light;
 }
@@ -29,6 +30,7 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
+  filter: none !important;
 }
 
 /* Sections
@@ -81,6 +83,11 @@ main {
 ul {
   padding: 0;
   list-style: none;
+}
+
+img,
+video {
+  filter: none !important;
 }
 
 h1,
