@@ -1,6 +1,11 @@
 import styles from './index.module.css'
 import useIntersection from '../hooks/useIntersection'
 import LogoTexto from '../components/Features/LogoTexto'
+import estrellas from '@/assets/images/estrellas.svg'
+import bolo from '@/assets/images/boloBlanco.svg'
+import video from '@/assets/videos/video.mp4'
+import imagen1 from '@/assets/images/imagen1.webp'
+import maquinita from '@/assets/images/maquinita.webp'
 
 function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLDivElement>({
@@ -23,11 +28,11 @@ function Page() {
     <>
       <main className={styles.main}>
         <div className={styles.banner} ref={ref4} data-isvisible={isV4 ? 'true' : 'false'}>
-          <img className={styles.estrellas} src="/images/estrellas.svg" alt="estrellas en webp" loading="lazy" />
+          <img className={styles.estrellas} src={estrellas} alt="estrellas en webp" loading="lazy" />
           <h1>
             <LogoTexto />
           </h1>
-          <img className={styles.pin} src="/images/boloBlanco.svg" alt="bolo blanco" ref={ref5} data-isvisible={isV5 ? 'true' : 'false'} loading="lazy" />
+          <img className={styles.pin} src={bolo} alt="bolo blanco" ref={ref5} data-isvisible={isV5 ? 'true' : 'false'} loading="lazy" />
         </div>
       </main>
       <article className={styles.article}>
@@ -54,7 +59,7 @@ function Page() {
           <h2>nos&nbsp;mudamos!</h2>
           <div className={styles.sectionFirstData}>
             <div className={styles.sectionFirstImg} ref={ref1} data-isvisible={isV1 ? 'true' : 'false'}>
-              <video src="/videos/video.mp4" loop autoPlay muted controls></video>
+              <video src={video} loop autoPlay muted controls></video>
             </div>
             <p>
               ¡Tenemos grandes noticias! Nos mudamos a un nuevo lugar espectacular, más amplio y completamente renovado para brindarte una experiencia de
@@ -67,7 +72,7 @@ function Page() {
           <h2>qué&nbsp;podemos ofrecerte?</h2>
           <div className={styles.sectionSecondData}>
             <div className={styles.sectionSecondImg} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'}>
-              <img src="/images/imagen1.webp" alt="imagen del bowling" loading="lazy" />
+              <img src={imagen1} alt="imagen del bowling" loading="lazy" />
             </div>
             <p>
               ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <b>líneas gratis</b> y disfrutar de diversión asegurada.
@@ -78,7 +83,7 @@ function Page() {
         </section>
         <section className={styles.sectionThird}>
           <div className={styles.sectionThirdImg} ref={ref3} data-isvisible={isV3 ? 'true' : 'false'}>
-            <img src="/images/maquinita.webp" alt="Maquinita de juegos" loading="lazy" />
+            <img src={maquinita} alt="Maquinita de juegos" loading="lazy" />
           </div>
           <div>
             <h2> diversión!</h2>{' '}

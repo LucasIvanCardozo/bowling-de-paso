@@ -1,4 +1,5 @@
 import styles from './tarjetaAlbum.module.css'
+import bolo from '@/assets/images/boloBlanco.svg'
 
 export default function TarjetaAlbum({ name, lastName, age, img, record }: { name: string; lastName: string; age: number; img: string; record: string }) {
   return (
@@ -13,7 +14,7 @@ export default function TarjetaAlbum({ name, lastName, age, img, record }: { nam
           <div className={styles.record}>
             <p>{record}</p>
             <div className={styles.pin}>
-              <img src="/images/boloBlanco.svg" alt="Bolo" loading="lazy" />
+              <img src={bolo} alt="Bolo" loading="lazy" />
             </div>
           </div>
         </div>

@@ -1,4 +1,7 @@
 import styles from './footer.module.css'
+import whatsapp from '@/assets/images/whatsappLogo.png'
+import instagram from '@/assets/images/instagramLogo.png'
+import facebook from '@/assets/images/facebookLogo.png'
 
 export default function Footer() {
   return (
@@ -24,12 +27,12 @@ export default function Footer() {
       <ul className={styles.ul} id="contactos">
         <li className={styles.li}>
           <a href="https://www.instagram.com/elbowlingdepaso/" target="_blank" rel="noreferrer">
-            <img className={styles.img} src="/images/instagramLogo.webp" alt="Logo de Instagram" loading="lazy" />
+            <img className={styles.img} src={instagram} alt="Logo de Instagram" loading="lazy" />
           </a>
         </li>
         <li className={styles.li}>
           <a href="https://www.facebook.com/elbowlingdepaso2442" target="_blank" rel="noreferrer">
-            <img className={styles.img} src="/images/facebookLogo.webp" alt="Logo de Facebook" loading="lazy" />
+            <img className={styles.img} src={facebook} alt="Logo de Facebook" loading="lazy" />
           </a>
         </li>
         <li className={styles.li}>
@@ -38,7 +41,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <img className={styles.img} src="/images/whatsappLogo.webp" alt="Logo de whatsapp" loading="lazy" />
+            <img className={styles.img} src={whatsapp} alt="Logo de whatsapp" loading="lazy" />
           </a>
         </li>
       </ul>

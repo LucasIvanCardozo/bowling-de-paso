@@ -9,6 +9,13 @@ import TarjetaAlbum from '../../components/Features/TarjetaAlbum'
 import type { People } from '../../types/people'
 import type { Scoreboard } from '../../types/scoreboard'
 import { useWidth } from '../../hooks/useWidth'
+import flecha from '@/assets/images/flecha.svg'
+import viento from '@/assets/images/viento.svg'
+import elipse from '@/assets/images/elipse.svg'
+import palosTexto from '@/assets/images/100PalosTexto.svg'
+import palos from '@/assets/images/100Palos.svg'
+import vaso from '@/assets/images/vaso100Palos.webp'
+import nube from '@/assets/images/nube.webp'
 
 export default function Page() {
   const { width } = useWidth()
@@ -133,17 +140,17 @@ export default function Page() {
           </div>
         </div>
         <section className={styles.pin100}>
-          <img className={styles.pin100Arrow} src="/images/flecha.svg" alt="Flecha curva" loading="lazy" />
+          <img className={styles.pin100Arrow} src={flecha} alt="Flecha curva" loading="lazy" />
           <div>
             <div className={styles.pin100Animation}>
-              <img className={styles.pin100Wind} src="/images/viento.svg" alt="Viento" ref={ref2} data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
+              <img className={styles.pin100Wind} src={viento} alt="Viento" ref={ref2} data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
               <div className={styles.pin100Ball}>
-                <img src="/images/elipse.svg" alt="Pelota" data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
-                <img src="/images/100PalosTexto.svg" alt="Texto en SVG ('100 bolos')" data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
+                <img src={elipse} alt="Pelota" data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
+                <img src={palosTexto} alt="Texto en SVG ('100 bolos')" data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
               </div>
-              <img className={styles.pin100Pins} src="/images/100Palos.svg" alt="Bolos" loading="lazy" />
+              <img className={styles.pin100Pins} src={palos} alt="Bolos" loading="lazy" />
             </div>
-            <img className={styles.pin100Glass} src="/images/vaso100Palos.webp" alt="Vaso de regalo" loading="lazy" />
+            <img className={styles.pin100Glass} src={vaso} alt="Vaso de regalo" loading="lazy" />
           </div>
         </section>
         {/*  <section className={styles.pin130}>
@@ -174,7 +181,7 @@ export default function Page() {
         <article className={styles.records}>
           <section className={styles.winners}>
             <div className={styles.winnersImg}>
-              <img src="/images/nube.webp" alt="Nube" loading="lazy" />
+              <img src={nube} alt="Nube" loading="lazy" />
               <h2>
                 los cracks de <br />
                 {Intl.DateTimeFormat('es-ES', { month: 'long' }).format(+new Date() - 2592000000)}

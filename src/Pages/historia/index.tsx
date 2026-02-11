@@ -1,5 +1,12 @@
 import styles from './index.module.css'
 import useIntersection from '../../hooks/useIntersection'
+import pelotaHistoria from '@/assets/images/pelotaHistoria.webp'
+import tijeras from '@/assets/images/tijeras.webp'
+import inauguracion from '@/assets/images/inauguracion.webp'
+import circuloNegado from '@/assets/images/circuloNegado.webp'
+import cierre from '@/assets/images/cierre.webp'
+import confetis from '@/assets/images/confetis.webp'
+import abrimos from '@/assets/images/abrimos.webp'
 
 export default function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLDivElement>({
@@ -13,7 +20,7 @@ export default function Page() {
     <>
       <main className={styles.main}>
         <div ref={ref1} data-isvisible={isV1 ? 'true' : 'false'}>
-          <img src="/images/pelotaHistoria.webp" alt="pelota de bowling con transparencia" loading="lazy" />
+          <img src={pelotaHistoria} alt="pelota de bowling con transparencia" loading="lazy" />
           <header ref={ref2} data-isvisible={isV2 ? 'true' : 'false'}>
             <h1>historia</h1>
             <p>de nuestro bowling</p>
@@ -24,7 +31,7 @@ export default function Page() {
         <div></div>
         <section className={styles.sectionsList}>
           <section>
-            <img src="/images/tijeras.webp" alt="Tijeras" loading="lazy" />
+            <img src={tijeras} alt="Tijeras" loading="lazy" />
             <div>
               <h2>14 de Septiembre 1988</h2>
               <p>
@@ -33,11 +40,11 @@ export default function Page() {
                 de todas las edades. Nuestro compromiso inquebrantable es brindar experiencias excepcionales y momentos inolvidables. ¡Únete a nosotros y forma
                 parte de nuestra historia en constante crecimiento!
               </p>
-              <img src="/images/inauguracion.webp" alt="" loading="lazy" />
+              <img src={inauguracion} alt="" loading="lazy" />
             </div>
           </section>
           <section>
-            <img src="/images/circuloNegado.webp" alt="Señal que indica prohibición" loading="lazy" />
+            <img src={circuloNegado} alt="Señal que indica prohibición" loading="lazy" />
             <div>
               <h2>8 de Agosto 2022</h2>
               <p>
@@ -45,11 +52,11 @@ export default function Page() {
                 comunidad de jugadores. A pesar de ello, estamos comprometidos en encontrar soluciones y reabrir en un futuro cercano. Agradecemos el apoyo y
                 comprensión durante este periodo difícil y esperamos recibirlos nuevamente para crear momentos inolvidables juntos.
               </p>
-              <img src="/images/cierre.webp" alt="" loading="lazy" />
+              <img src={cierre} alt="" loading="lazy" />
             </div>
           </section>
           <section>
-            <img src="/images/confetis.webp" alt="Confetis" loading="lazy" />
+            <img src={confetis} alt="Confetis" loading="lazy" />
             <div>
               <h2>10 de Marzo 2023</h2>
               <p>
@@ -58,7 +65,7 @@ export default function Page() {
                 la comunidad, creando recuerdos inolvidables en nuestro renovado establecimiento. ¡Los esperamos con entusiasmo en nuestro emocionante nuevo
                 lugar!
               </p>
-              <img src="/images/abrimos.webp" alt="" loading="lazy" />
+              <img src={abrimos} alt="" loading="lazy" />
             </div>
           </section>
         </section>

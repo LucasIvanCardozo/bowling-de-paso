@@ -1,5 +1,9 @@
 import styles from './tarjeta.module.css'
 import { useState } from 'react'
+import medal1 from '@/assets/images/medal1.webp'
+import medal2 from '@/assets/images/medal2.webp'
+import medal3 from '@/assets/images/medal3.webp'
+import bolo from '@/assets/images/boloBlanco.svg'
 
 export default function Tarjeta({
   name,
@@ -18,7 +22,7 @@ export default function Tarjeta({
 }) {
   const [verInfo, setVerInfo] = useState(false)
   const [waitTransition, setWaitTransition] = useState(false)
-  const medals = ['/images/medal1.webp', '/images/medal2.webp', '/images/medal3.webp']
+  const medals = [medal1, medal2, medal3]
 
   const handleTrans = () => {
     if (!waitTransition) {
@@ -45,7 +49,7 @@ export default function Tarjeta({
           <p className={styles.personAge}>{age} años</p>
         </div>
         <div className={styles.personRecord}>
-          <img src="/images/boloBlanco.svg" alt="Bolo" loading="lazy" />
+          <img src={bolo} alt="Bolo" loading="lazy" />
           <p>{record}</p>
         </div>
       </div>
