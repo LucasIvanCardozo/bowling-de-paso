@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 5px;
+  flex-grow: 1;
+  gap: .5em;
+}
+
+.container > h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #252525;
+  font-family: bebasNeue;
+  text-transform: uppercase;
+  border-bottom: 1px solid #0003;
+}
+
+.container > ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+}
+
+.product {
+  margin: 1px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productData {
+  display: flex;
+  width: 100%;
+}
+
+.productName {
+  font-size: 1em;
+  margin: 0;
+  min-width: max-content;
+  font-family: sans-serif;
+
+}
+
+.dots{
+  flex-grow: 1;
+  width: min-content;
+  overflow: hidden;
+}
+
+.dots > p {
+  margin: 0;
+
+}
+
+.productPrice {
+  margin: 0;
+}
+
+.productDescription {
+  font-size: 0.8em;
+  margin: 0;
+  color: #444;
+  align-self: flex-end;
+  font-family: sans-serif;
+}
+
+.additional > h4{
+  text-transform: capitalize;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.additional > p {
+  font-size: 0.8em;
+  margin: 0;
+}

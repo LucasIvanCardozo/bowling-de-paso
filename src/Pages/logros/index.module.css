@@ -1,0 +1,418 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 18em;
+  height: 60vw;
+  max-height: 50vh;
+  margin: 5vh 0;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.titulo > div {
+  display: flex;
+  position: relative;
+}
+
+.titulo h1 {
+  position: relative;
+  font-family: bebasNeue, fantasy;
+  font-size: 7em;
+}
+
+.titulo h1::before {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 20px;
+  z-index: 15;
+  border-radius: 10px;
+  filter: blur(28px);
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(-0.2em);
+  transition: transform 2s;
+}
+
+.titulo h1[data-isvisible='true']::before {
+  animation-name: banner;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transform: translateX(1.8em);
+}
+
+@keyframes banner {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.titulo > p {
+  font-family: arialRounded;
+  margin: 0;
+  font-size: 1em;
+  width: 70vw;
+  max-width: 500px;
+  text-align: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6em;
+  overflow: hidden;
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+}
+
+.boxesSide {
+  opacity: 0.7;
+  display: grid;
+  grid-template-rows: 9em;
+  grid-auto-columns: 9em;
+  grid-auto-flow: column;
+  border: 2px solid #000;
+  border-left: 0 solid #000;
+  border-right: 0 solid #000;
+}
+
+.pin100 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20rem;
+  max-width: 800px;
+  font-size: 0.6rem;
+}
+
+.pin100Arrow {
+  height: 5em;
+  align-self: center;
+  transform: scaleX(1);
+}
+
+.pin100 > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pin100Animation {
+  display: flex;
+  align-items: flex-end;
+}
+
+.pin100Wind {
+  height: 3em;
+  width: 3em;
+  object-fit: contain;
+  opacity: 0.4;
+}
+
+.pin100Wind[data-isvisible='true'] {
+  animation-name: wind;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+}
+
+@keyframes wind {
+  to {
+    opacity: 1;
+  }
+}
+
+.pin100Ball {
+  position: relative;
+  height: 10em;
+  width: 10em;
+  margin-left: -1.3em;
+  margin-right: -2.5em;
+}
+
+.pin100Ball > img:first-child {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transform: translateX(-1.5em);
+}
+
+.pin100Ball > img:first-child[data-isvisible='true'] {
+  animation-name: ball100;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ball100 {
+  to {
+    transform: translateX(0em) rotate(1080deg);
+  }
+}
+
+.pin100Ball > img:last-child {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.pin100Ball > img:last-child[data-isvisible='true'] {
+  animation-name: text100;
+  animation-duration: 0.8s;
+  animation-delay: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text100 {
+  to {
+    opacity: 1;
+  }
+}
+
+.pin100Pins {
+  height: 8.5em;
+  aspect-ratio: 26/25;
+}
+
+.pin100Glass {
+  height: 10em;
+}
+
+/* .pin130 {
+  position: relative;
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 800px;
+  font-size: 0.6rem;
+}
+
+.comingsoon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.comingsoon_text {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4em;
+  padding: 0.3em;
+  margin: 0;
+  color: #eee;
+  border-radius: 10px;
+  background-color: #777b;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  transform-origin: center;
+}
+
+.section_130Palos_wind {
+  height: 5em;
+  width: 5em;
+  object-fit: contain;
+  transform: rotateY(180deg);
+}
+
+.section_130Palos_ball {
+  position: relative;
+  height: 17em;
+  width: 17em;
+  margin-left: -4.8em;
+  margin-right: -2.5em;
+}
+
+.section_130Palos_ballImg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.section_130Palos_textImg {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+
+.section_130Palos_palos {
+  height: 16em;
+  aspect-ratio: 26/25;
+} */
+
+.records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.winnersImg {
+  position: relative;
+  aspect-ratio: 16/7;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winnersImg > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: -1;
+  filter: drop-shadow(1px 1px 2px #000);
+}
+
+.winnersImg > h2 {
+  margin-top: 0.6em;
+  font-family: bebasNeue;
+  font-size: 1.9em;
+  text-align: center;
+}
+
+.winners > ul {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  gap: 3vw;
+}
+
+.album {
+  position: relative;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 75%;
+  max-width: 800px;
+  font-family: bebasNeue;
+  background-color: #424242;
+  margin-bottom: 3em;
+}
+
+.album > h2 {
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c3c3c3;
+}
+
+.album > ul {
+  width: 100%;
+  display: grid;
+  gap: 0.5em;
+  margin: 0.5em 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .titulo h1 {
+    font-size: 7em;
+  }
+  .pin100 {
+    width: 27rem;
+    font-size: 0.75em;
+  }
+  /* .pin130 {
+    font-size: 0.75rem;
+  } */
+  .boxes {
+    font-size: 1.2rem;
+  }
+  .winners {
+    font-size: 1.2em;
+  }
+  .album {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .titulo h1 {
+    font-size: 8em;
+  }
+  .pin100 {
+    width: 36rem;
+    font-size: 0.9rem;
+  }
+  /*  .pin130 {
+    font-size: 0.9rem;
+  } */
+  .boxes {
+    font-size: 1.5rem;
+  }
+  .winners {
+    font-size: 1.3em;
+  }
+  .album {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .titulo h1 {
+    font-size: 9em;
+  }
+  .pin100 {
+    width: 50rem;
+    font-size: 1em;
+  }
+  /* .pin130 {
+    font-size: 1rem;
+  } */
+  .boxes {
+    font-size: 2.1rem;
+  }
+  .winners {
+    font-size: 1.5em;
+  }
+  .album {
+    font-size: 1.3em;
+  }
+}

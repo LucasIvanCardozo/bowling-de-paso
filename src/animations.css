@@ -1,0 +1,131 @@
+@keyframes balanceo1 {
+  to {
+    transform: rotate(5deg) translate(-0.5em) rotate(130deg) rotateX(690deg);
+  }
+}
+
+@keyframes balanceo2 {
+  to {
+    transform: rotate(5deg) translate(-3.5em) rotate(130deg) rotateX(690deg);
+  }
+}
+
+@keyframes balanceo3 {
+  to {
+    transform: rotate(10deg) translate(-1.5em) rotate(330deg) rotateX(390deg);
+  }
+}
+
+@keyframes balanceo4 {
+  to {
+    transform: rotate(10deg) translate(-4.5em) rotate(330deg) rotateX(390deg);
+  }
+}
+
+@keyframes balanceo5 {
+  to {
+    transform: rotate(20deg) translate(-2.5em) rotate(330deg) rotateX(330deg);
+  }
+}
+
+@keyframes balanceo6 {
+  to {
+    transform: rotate(20deg) translate(-5.5em) rotate(330deg) rotateX(150deg);
+  }
+}
+
+@keyframes balanceo7 {
+  to {
+    transform: rotate(30deg) translate(-3.5em) rotate(330deg) rotateX(510deg);
+  }
+}
+
+@keyframes balanceo8 {
+  to {
+    transform: rotate(30deg) translate(-0.5em) rotate(330deg) rotateX(510deg);
+  }
+}
+
+@keyframes balanceo9 {
+  to {
+    transform: rotate(40deg) translate(-4.5em) rotate(330deg) rotateX(-30deg);
+  }
+}
+
+@keyframes balanceo10 {
+  to {
+    transform: rotate(40deg) translate(-1.5em) rotate(330deg) rotateX(-30deg);
+  }
+}
+
+@keyframes balanceo11 {
+  to {
+    transform: rotate(50deg) translate(-3.3em) rotate(400deg) rotateX(130deg);
+  }
+}
+
+@keyframes x1 {
+  to {
+    transform: rotate(5deg) translate(-1em) rotate(180deg) rotateX(720deg);
+  }
+}
+
+@keyframes x2 {
+  to {
+    transform: rotate(5deg) translate(-4em) rotate(180deg) rotateX(720deg);
+  }
+}
+
+@keyframes x3 {
+  to {
+    transform: rotate(10deg) translate(-2em) rotate(400deg) rotateX(360deg);
+  }
+}
+
+@keyframes x4 {
+  to {
+    transform: rotate(10deg) translate(-5em) rotate(400deg) rotateX(360deg);
+  }
+}
+
+@keyframes x5 {
+  to {
+    transform: rotate(20deg) translate(-3em) rotate(400deg) rotateX(360deg);
+  }
+}
+
+@keyframes x6 {
+  to {
+    transform: rotate(20deg) translate(-6em) rotate(400deg) rotateX(180deg);
+  }
+}
+
+@keyframes x7 {
+  to {
+    transform: rotate(30deg) translate(-4em) rotate(400deg) rotateX(540deg);
+  }
+}
+
+@keyframes x8 {
+  to {
+    transform: rotate(30deg) translate(-1em) rotate(400deg) rotateX(540deg);
+  }
+}
+
+@keyframes x9 {
+  to {
+    transform: rotate(40deg) translate(-5em) rotate(400deg) rotateX(0deg);
+  }
+}
+
+@keyframes x10 {
+  to {
+    transform: rotate(40deg) translate(-2em) rotate(400deg) rotateX(0deg);
+  }
+}
+
+@keyframes x11 {
+  to {
+    transform: rotate(50deg) translate(-4em) rotate(400deg) rotateX(180deg);
+  }
+}

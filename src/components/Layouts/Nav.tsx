@@ -1,0 +1,63 @@
+import styles from './nav.module.css'
+import { useState } from 'react'
+import LogoTexto from '../Features/LogoTexto'
+import useIntersection from '../../hooks/useIntersection'
+import { NavLink } from 'react-router'
+
+export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [waitTransition, setWaitTransition] = useState(false)
+
+  const { ref: ref1, isVisible } = useIntersection({
+    threshold: 0,
+  })
+
+  const handleButton = () => {
+    if (!waitTransition) {
+      setWaitTransition(true)
+      setMenuOpen(!menuOpen)
+      setTimeout(() => setWaitTransition(false), 300)
+    }
+  }
+
+  return (
+    <nav className={styles.container} ref={ref1} data-isvisible={isVisible}>
+      <div className={styles.background} onClick={handleButton} data-open={menuOpen}></div>
+      <div className={styles.logo}>
+        <LogoTexto color="#eee" />
+      </div>
+      <button className={styles.button} aria-label="boton del menú" data-open={menuOpen} onClick={handleButton}>
+        <span className={styles.span}></span>
+        <span className={styles.span}></span>
+        <span className={styles.span}></span>
+      </button>
+      <ul className={styles.ul} data-open={menuOpen}>
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            <NavLink
+              className={({ isActive }) => {
+                setMenuOpen(false)
+                return isActive ? styles.active : ''
+              }}
+              to={link.to}
+            >
+              {link.name}
+            </NavLink>
+          </li>
+        ))}
+        <li>
+          <a href="#contactanos" onClick={() => setMenuOpen(false)}>
+            CONTACTANOS
+          </a>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+
+const navLinks = [
+  { name: 'INICIO', to: '/' },
+  { name: 'MENU', to: '/menu' },
+  { name: 'LOGROS', to: '/logros' },
+  { name: 'HISTORIA', to: '/historia' },
+]
