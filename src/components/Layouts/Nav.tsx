@@ -15,7 +15,14 @@ export default function Nav() {
 
   // Close menu when route changes
   useEffect(() => {
-    const timer = setTimeout(() => setMenuOpen(false), 0)
+    const timer = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })
+      setMenuOpen(false)
+    }, 10)
     return () => clearTimeout(timer)
   }, [location.pathname])
 
@@ -41,10 +48,7 @@ export default function Nav() {
       <ul className={styles.ul} data-open={menuOpen}>
         {navLinks.map((link, index) => (
           <li key={index}>
-            <NavLink
-              className={({ isActive }) => (isActive ? styles.active : '')}
-              to={link.to}
-            >
+            <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to={link.to}>
               {link.name}
             </NavLink>
           </li>
