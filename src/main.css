@@ -13,6 +13,9 @@
     url(./assets/fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
   font-display: swap;
 }
+:root {
+  color-scheme: light;
+}
 
 html {
   /* 2 */

@@ -189,7 +189,15 @@ export default function Page() {
             </div>
             <ul>
               {winners.map(({ name, lastName, age, record }, index) => (
-                <Tarjeta key={name} name={name} lastName={lastName} age={age} img={`../assets/images/fondoCarta.webp`} record={record} pos={index + 1} />
+                <Tarjeta
+                  key={name}
+                  name={name}
+                  lastName={lastName}
+                  age={age}
+                  img={`${import.meta.env.BASE_URL}records/${name}${lastName}.webp`}
+                  record={record}
+                  pos={index + 1}
+                />
               ))}
             </ul>
           </section>
@@ -197,7 +205,14 @@ export default function Page() {
             <h2>grandes jugadores del mes</h2>
             <ul>
               {totalPeople.map(({ name, lastName, age, record }) => (
-                <TarjetaAlbum key={name} name={name} lastName={lastName} age={age} img={`../assets/images/fondoCarta.webp`} record={record} />
+                <TarjetaAlbum
+                  key={name}
+                  name={name}
+                  lastName={lastName}
+                  age={age}
+                  img={`${import.meta.env.BASE_URL}records/${name}${lastName}.webp`}
+                  record={record}
+                />
               ))}
             </ul>
           </section>
