@@ -1,16 +1,23 @@
 import styles from './nav.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import LogoTexto from '../Features/LogoTexto'
 import useIntersection from '../../hooks/useIntersection'
-import { NavLink } from 'react-router'
+import { NavLink, useLocation } from 'react-router'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [waitTransition, setWaitTransition] = useState(false)
+  const location = useLocation()
 
   const { ref: ref1, isVisible } = useIntersection({
     threshold: 0,
   })
+
+  // Close menu when route changes
+  useEffect(() => {
+    const timer = setTimeout(() => setMenuOpen(false), 0)
+    return () => clearTimeout(timer)
+  }, [location.pathname])
 
   const handleButton = () => {
     if (!waitTransition) {
@@ -35,10 +42,7 @@ export default function Nav() {
         {navLinks.map((link, index) => (
           <li key={index}>
             <NavLink
-              className={({ isActive }) => {
-                setMenuOpen(false)
-                return isActive ? styles.active : ''
-              }}
+              className={({ isActive }) => (isActive ? styles.active : '')}
               to={link.to}
             >
               {link.name}

@@ -52,7 +52,7 @@
   background-color: #fff;
 }
 
-.ul > li:hover > .link {
+.ul > li:hover > a {
   color: #222222;
 }
 
