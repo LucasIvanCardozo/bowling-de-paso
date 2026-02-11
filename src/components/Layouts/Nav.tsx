@@ -48,15 +48,21 @@ export default function Nav() {
       <ul className={styles.ul} data-open={menuOpen}>
         {navLinks.map((link, index) => (
           <li key={index}>
-            <NavLink className={({ isActive }) => (isActive ? styles.active : '')} to={link.to}>
+            <NavLink className={({ isActive }) => (isActive ? styles.active : '') + ` ${styles.link}`} to={link.to}>
               {link.name}
             </NavLink>
           </li>
         ))}
         <li>
-          <a href="#contactanos" onClick={() => setMenuOpen(false)}>
+          <button
+            className={styles.link + ' ' + styles.contact}
+            onClick={() => {
+              scrollToId('contactanos')
+              setMenuOpen(false)
+            }}
+          >
             CONTACTANOS
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
@@ -69,3 +75,10 @@ const navLinks = [
   { name: 'LOGROS', to: '/logros' },
   { name: 'HISTORIA', to: '/historia' },
 ]
+
+const scrollToId = (id: string) => {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+}
