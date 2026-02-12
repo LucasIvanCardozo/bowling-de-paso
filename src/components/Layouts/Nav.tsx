@@ -9,7 +9,7 @@ export default function Nav() {
   const [waitTransition, setWaitTransition] = useState(false)
   const location = useLocation()
 
-  const { ref: ref1, isVisible } = useIntersection({
+  const { ref: ref1, isVisible } = useIntersection<HTMLElement>({
     threshold: 0,
   })
 
