@@ -47,7 +47,7 @@ export default function Footer() {
       </ul>
       <hr style={{ width: '80vw' }} />
       <div className={styles.terms}>
-        <p>©2024 Todos los derechos reservados</p>
+        <p>{`©${new Date().getFullYear()} Todos los derechos reservados`}</p>
         <p>
           Creado por{' '}
           <b>
