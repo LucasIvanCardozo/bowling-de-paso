@@ -2,7 +2,7 @@
   font-family: bebasNeue;
   src:
     local('bebasNeue'),
-    url(./fonts/BebasNeue-Regular.woff2) format('woff2');
+    url(/bowling-de-paso/fonts/BebasNeue-Regular.woff2) format('woff2');
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: arialRounded;
   src:
     local('arialRounded'),
-    url(./fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
+    url(/bowling-de-paso/fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
   font-display: swap;
 }
 
