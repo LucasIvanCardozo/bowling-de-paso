@@ -8,12 +8,10 @@ import Layout from './Pages/layout.tsx'
 import Logros from './Pages/logros/index.tsx'
 import Menu from './Pages/menu/index.tsx'
 import { HelmetProvider } from 'react-helmet-async'
-import { Loading } from './Pages/loading.tsx'
 
 const router = createHashRouter([
   {
     Component: Layout,
-    loader: Loading,
     children: [
       {
         index: true,
