@@ -1,5 +1,5 @@
 import styles from './tarjetaAlbum.module.css'
-import bolo from '@/assets/images/boloBlanco.svg'
+import bolo from '@/assets/svgs/boloBlanco.svg'
 
 export default function TarjetaAlbum({ name, lastName, age, img, record }: { name: string; lastName: string; age: number; img: string; record: string }) {
   return (

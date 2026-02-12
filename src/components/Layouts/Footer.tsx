@@ -1,7 +1,7 @@
 import styles from './footer.module.css'
-import whatsapp from '@/assets/images/whatsappLogo.png'
-import instagram from '@/assets/images/instagramLogo.png'
-import facebook from '@/assets/images/facebookLogo.png'
+import whatsapp from '@/assets/images/whatsappLogo.webp'
+import instagram from '@/assets/images/instagramLogo.webp'
+import facebook from '@/assets/images/facebookLogo.webp'
 
 export default function Footer() {
   return (

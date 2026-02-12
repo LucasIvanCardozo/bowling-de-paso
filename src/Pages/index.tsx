@@ -1,10 +1,10 @@
 import styles from './index.module.css'
 import useIntersection from '../hooks/useIntersection'
 import LogoTexto from '../components/Features/LogoTexto'
-import estrellas from '@/assets/images/estrellas.svg'
-import bolo from '@/assets/images/boloBlanco.svg'
+import estrellas from '@/assets/svgs/estrellas.svg'
+import bolo from '@/assets/svgs/boloBlanco.svg'
 import video from '@/assets/videos/video.mp4'
-import imagen1 from '@/assets/images/imagen1.webp'
+import paraCambiar from '@/assets/images/paraCambiar.webp'
 import maquinita from '@/assets/images/maquinita.webp'
 import { Helmet } from 'react-helmet-async'
 
@@ -80,7 +80,7 @@ function Page() {
           <h2>qué&nbsp;podemos ofrecerte?</h2>
           <div className={styles.sectionSecondData}>
             <div className={styles.sectionSecondImg} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'}>
-              <img src={imagen1} alt="imagen del bowling" loading="lazy" />
+              <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
             </div>
             <p>
               ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <b>líneas gratis</b> y disfrutar de diversión asegurada.
