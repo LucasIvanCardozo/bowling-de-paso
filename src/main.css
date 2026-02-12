@@ -2,7 +2,7 @@
   font-family: bebasNeue;
   src:
     local('bebasNeue'),
-    url(./assets/fonts/BebasNeue-Regular.woff2) format('woff2');
+    url(./fonts/BebasNeue-Regular.woff2) format('woff2');
   font-display: swap; /* Mobile-first - immediate text visibility */
 }
 
@@ -10,27 +10,8 @@
   font-family: arialRounded;
   src:
     local('arialRounded'),
-    url(./assets/fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
-  font-display: swap; /* Mobile-first - immediate text visibility */
-}
-
-/* Desktop optimization con preload - font-face opcional para eliminar swaps */
-@media (min-width: 1025px) {
-  @font-face {
-    font-family: bebasNeue;
-    src:
-      local('bebasNeue'),
-      url(./assets/fonts/BebasNeue-Regular.woff2) format('woff2');
-    font-display: optional; /* Desktop con preload - usa fuente solo si disponible inmediatamente */
-  }
-
-  @font-face {
-    font-family: arialRounded;
-    src:
-      local('arialRounded'),
-      url(./assets/fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
-    font-display: optional; /* Desktop con preload - usa fuente solo si disponible inmediatamente */
-  }
+    url(./fonts/Arial-Rounded-MT-Std.woff2) format('woff2');
+  font-display: swap;
 }
 
 :root {
@@ -74,16 +55,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-/* Eliminar blur cuando la imagen ha cargado */
-body.loaded {
-  filter: blur(0);
-}
-
-/* Estado inicial con blur suave durante carga */
-body:not(.loaded) {
-  filter: blur(2px);
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {

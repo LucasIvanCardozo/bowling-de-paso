@@ -16,6 +16,7 @@ import palosTexto from '@/assets/images/100PalosTexto.svg'
 import palos from '@/assets/images/100Palos.svg'
 import vaso from '@/assets/images/vaso100Palos.webp'
 import nube from '@/assets/images/nube.webp'
+import { Helmet } from 'react-helmet-async'
 
 export default function Page() {
   const { width } = useWidth()
@@ -78,6 +79,13 @@ export default function Page() {
 
   return (
     <>
+      <Helmet>
+        <title>Logros - Bowling de Paso</title>
+        <meta
+          name="description"
+          content="Explora recompensas y logros en Bowling de Paso, Mar del Plata. Celebra éxitos con premios y únete a la comunidad ganadora. ¡Inspírate para la grandeza!"
+        />
+      </Helmet>
       <main className={styles.main}>
         <div className={styles.titulo}>
           <div>

@@ -5,6 +5,7 @@ import Marcas from '../../components/Features/Marcas'
 import menuData from '../../lib/db/menuData.json'
 import useIntersection from '../../hooks/useIntersection'
 import type { MenuCategory, MenuSubCategory } from '../../types/menu'
+import { Helmet } from 'react-helmet-async'
 
 export default function Page() {
   const categories = menuData.categories as MenuCategory[]
@@ -36,6 +37,14 @@ export default function Page() {
 
   return (
     <>
+      <Helmet>
+        <title>Menu - Bowling de Paso</title>
+        <meta
+          name="description"
+          content="Explora nuestra deliciosa carta en Bowling de Paso, Mar del Plata. Comidas, bebidas y postres para hacer tu experiencia memorable. ¡Ven y disfruta!
+"
+        />
+      </Helmet>
       <main className={styles.main}>
         <div className={styles.titulo}>
           <h1 ref={ref1} data-isvisible={isV1}>

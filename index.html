@@ -1,22 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Critical preloads to eliminate FOIT and FOUT -->
-    <link rel="preload" href="/src/assets/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/Arial-Rounded-MT-Std.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/src/assets/images/fondoMasContraste.webp" as="image">
-    
-    <meta charset="UTF-8" />
+    <link rel="preload" href="./fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Arial-Rounded-MT-Std.woff2" as="font" type="font/woff2" crossorigin="anonymous">    
     <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#ffffff">
-    <title>bowling-de-paso</title>
+    <meta charSet="utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="es" />
+    <meta name="author" content="Lucas Iván Cardozo" />
+    <link rel="canonical" href="https://www.bowlingdepaso.com" />
   </head>
   <body>
     <div id="root"></div>
-    <!-- Blur-up loading script para imagen de fondo -->
-    <script type="module" src="/src/image-loader.js"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -6,6 +6,7 @@ import bolo from '@/assets/images/boloBlanco.svg'
 import video from '@/assets/videos/video.mp4'
 import imagen1 from '@/assets/images/imagen1.webp'
 import maquinita from '@/assets/images/maquinita.webp'
+import { Helmet } from 'react-helmet-async'
 
 function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLDivElement>({
@@ -26,6 +27,13 @@ function Page() {
 
   return (
     <>
+      <Helmet>
+        <title>Bowling de Paso</title>
+        <meta
+          name="description"
+          content="Diviértete en nuestro moderno bowling en Mar del Plata. Bolos, aperitivos y diversión para todas las edades. ¡Únete! Abierto de 17hs a 2:30hs."
+        />
+      </Helmet>
       <main className={styles.main}>
         <div className={styles.banner} ref={ref4} data-isvisible={isV4 ? 'true' : 'false'}>
           <img className={styles.estrellas} src={estrellas} alt="estrellas en webp" loading="lazy" />

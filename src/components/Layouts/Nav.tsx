@@ -2,7 +2,7 @@ import styles from './nav.module.css'
 import { useState, useEffect } from 'react'
 import LogoTexto from '../Features/LogoTexto'
 import useIntersection from '../../hooks/useIntersection'
-import { NavLink, useLocation } from 'react-router'
+import { NavLink, useLocation } from 'react-router-dom'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -48,7 +48,7 @@ export default function Nav() {
       <ul className={styles.ul} data-open={menuOpen}>
         {navLinks.map((link, index) => (
           <li key={index}>
-            <NavLink className={({ isActive }) => (isActive ? styles.active : '') + ` ${styles.link}`} to={link.to}>
+            <NavLink className={({ isActive }) => (isActive ? styles.active : '') + ` ${styles.link}`} to={link.to} viewTransition>
               {link.name}
             </NavLink>
           </li>

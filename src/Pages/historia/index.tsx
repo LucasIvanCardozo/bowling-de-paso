@@ -7,6 +7,7 @@ import circuloNegado from '@/assets/images/circuloNegado.webp'
 import cierre from '@/assets/images/cierre.webp'
 import confetis from '@/assets/images/confetis.webp'
 import abrimos from '@/assets/images/abrimos.webp'
+import { Helmet } from 'react-helmet-async'
 
 export default function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLDivElement>({
@@ -18,6 +19,13 @@ export default function Page() {
 
   return (
     <>
+      <Helmet>
+        <title>Historia - Bowling de Paso </title>
+        <meta
+          name="description"
+          content="Descubre la historia de Bowling de Paso en Mar del Plata, desde humildes inicios hasta ser el epicentro del entretenimiento. Crea recuerdos con nosotros!"
+        />
+      </Helmet>
       <main className={styles.main}>
         <div ref={ref1} data-isvisible={isV1 ? 'true' : 'false'}>
           <img src={pelotaHistoria} alt="pelota de bowling con transparencia" loading="lazy" />
