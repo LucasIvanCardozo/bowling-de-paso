@@ -35,7 +35,7 @@
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #eed0ad 8%, #e0a663 25%, #e99f4b 62.5%, #b87120 100%);
 }
 
-.container[data-verInfo] {
+.container[data-verinfo] {
   transform: rotateY(180deg);
 }
 
@@ -49,7 +49,7 @@
   z-index: 1;
 }
 
-.medal[data-verInfo] {
+.medal[data-verinfo] {
   opacity: 0;
 }
 
@@ -62,7 +62,7 @@
   transition-delay: 0.3s;
 }
 
-.front[data-verInfo] {
+.front[data-verinfo] {
   opacity: 0;
 }
 
@@ -117,7 +117,7 @@
   color: #faddcf;
 }
 
-.back[data-verInfo] {
+.back[data-verinfo] {
   opacity: 1;
 }
 

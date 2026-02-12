@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Critical preloads to eliminate FOIT and FOUT -->
+    <link rel="preload" href="/src/assets/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/assets/fonts/Arial-Rounded-MT-Std.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/assets/images/fondoMasContraste.webp" as="image">
+    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +15,8 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Blur-up loading script para imagen de fondo -->
+    <script type="module" src="/src/image-loader.js"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

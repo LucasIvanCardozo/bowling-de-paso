@@ -33,15 +33,15 @@ export default function Tarjeta({
   }
 
   return (
-    <li className={styles.container} data-verInfo={verInfo ? 'true' : undefined} onClick={() => handleTrans()}>
-      <img className={styles.medal} src={medals[pos - 1]} alt="Medalla" data-verInfo={verInfo ? 'true' : undefined} loading="lazy" />
-      <div className={styles.front} data-verInfo={verInfo ? 'true' : undefined}>
+    <li className={styles.container} data-verinfo={verInfo ? 'true' : undefined} onClick={() => handleTrans()}>
+      <img className={styles.medal} src={medals[pos - 1]} alt="Medalla" data-verinfo={verInfo ? 'true' : undefined} loading="lazy" />
+      <div className={styles.front} data-verinfo={verInfo ? 'true' : undefined}>
         <img src={img} loading="lazy" alt={`Imagen de ${name}`} />
         <button>
           <p>ver info</p>
         </button>
       </div>
-      <div className={styles.back} data-verInfo={verInfo ? 'true' : undefined}>
+      <div className={styles.back} data-verinfo={verInfo ? 'true' : undefined}>
         <div className={styles.personData}>
           <p>
             {name} {lastName}
