@@ -9,11 +9,7 @@ import TarjetaAlbum from '../../components/Features/TarjetaAlbum'
 import type { People } from '../../types/people'
 import type { Scoreboard } from '../../types/scoreboard'
 import { useWidth } from '../../hooks/useWidth'
-import flecha from '@/assets/svgs/flecha.svg'
-import viento from '@/assets/svgs/viento.svg'
-import elipse from '@/assets/svgs/elipse.svg'
-import palosTexto from '@/assets/svgs/100PalosTexto.svg'
-import palos from '@/assets/svgs/100Palos.svg'
+import { Flecha, Viento, Elipse, CienPalos, CienPalosTexto } from '../../assets/svgs'
 import vaso from '@/assets/images/vaso100Palos.webp'
 import nube from '@/assets/images/nube.webp'
 import { Helmet } from 'react-helmet-async'
@@ -26,7 +22,7 @@ export default function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLHeadingElement>({
     threshold: 0,
   })
-  const { ref: ref2, isVisible: isV2 } = useIntersection<HTMLImageElement>({
+  const { ref: ref2, isVisible: isV2 } = useIntersection<SVGSVGElement>({
     threshold: 0,
   })
 
@@ -148,15 +144,15 @@ export default function Page() {
           </div>
         </div>
         <section className={styles.pin100}>
-          <img className={styles.pin100Arrow} src={flecha} alt="Flecha curva" loading="lazy" />
+          <Flecha className={styles.pin100Arrow} />
           <div>
             <div className={styles.pin100Animation}>
-              <img className={styles.pin100Wind} src={viento} alt="Viento" ref={ref2} data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
+              <Viento className={styles.pin100Wind} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'} />
               <div className={styles.pin100Ball}>
-                <img src={elipse} alt="Pelota" data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
-                <img src={palosTexto} alt="Texto en SVG ('100 bolos')" data-isvisible={isV2 ? 'true' : 'false'} loading="lazy" />
+                <Elipse className={styles.elipse} data-isvisible={isV2 ? 'true' : 'false'} />
+                <CienPalosTexto className={styles.pin100Text} data-isvisible={isV2 ? 'true' : 'false'} />
               </div>
-              <img className={styles.pin100Pins} src={palos} alt="Bolos" loading="lazy" />
+              <CienPalos className={styles.pin100Pins} fill="black" />
             </div>
             <img className={styles.pin100Glass} src={vaso} alt="Vaso de regalo" loading="lazy" />
           </div>

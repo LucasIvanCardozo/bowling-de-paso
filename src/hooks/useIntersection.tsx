@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState, type RefObject } from 'react'
 
-interface IntersectionReturn<T extends HTMLElement> {
+interface IntersectionReturn<T extends HTMLElement | SVGElement> {
   ref: RefObject<T | null>
   isVisible: boolean
 }
 
-export default function useIntersection<T extends HTMLElement>(options: IntersectionObserverInit = {}): IntersectionReturn<T> {
+export default function useIntersection<T extends HTMLElement | SVGElement>(options: IntersectionObserverInit = {}): IntersectionReturn<T> {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<T | null>(null)
 

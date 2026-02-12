@@ -3,7 +3,7 @@ import { useState } from 'react'
 import medal1 from '@/assets/images/medal1.webp'
 import medal2 from '@/assets/images/medal2.webp'
 import medal3 from '@/assets/images/medal3.webp'
-import bolo from '@/assets/svgs/boloBlanco.svg'
+import { BoloBlanco } from '../../assets/svgs'
 
 export default function Tarjeta({
   name,
@@ -49,7 +49,7 @@ export default function Tarjeta({
           <p className={styles.personAge}>{age} años</p>
         </div>
         <div className={styles.personRecord}>
-          <img src={bolo} alt="Bolo" loading="lazy" />
+          <BoloBlanco className={styles.bolo} />
           <p>{record}</p>
         </div>
       </div>

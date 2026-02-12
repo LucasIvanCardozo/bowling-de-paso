@@ -1,8 +1,7 @@
 import styles from './index.module.css'
 import useIntersection from '../hooks/useIntersection'
 import LogoTexto from '../components/Features/LogoTexto'
-import estrellas from '@/assets/svgs/estrellas.svg'
-import bolo from '@/assets/svgs/boloBlanco.svg'
+import { Estrellas, BoloBlanco } from '../assets/svgs'
 import video from '@/assets/videos/video.mp4'
 import paraCambiar from '@/assets/images/paraCambiar.webp'
 import maquinita from '@/assets/images/maquinita.webp'
@@ -21,7 +20,7 @@ function Page() {
   const { ref: ref4, isVisible: isV4 } = useIntersection<HTMLImageElement>({
     threshold: 0,
   })
-  const { ref: ref5, isVisible: isV5 } = useIntersection<HTMLImageElement>({
+  const { ref: ref5, isVisible: isV5 } = useIntersection<SVGSVGElement>({
     threshold: 0,
   })
 
@@ -36,11 +35,11 @@ function Page() {
       </Helmet>
       <main className={styles.main}>
         <div className={styles.banner} ref={ref4} data-isvisible={isV4 ? 'true' : 'false'}>
-          <img className={styles.estrellas} src={estrellas} alt="estrellas en webp" loading="lazy" />
+          <Estrellas className={styles.estrellas} />
           <h1>
             <LogoTexto />
           </h1>
-          <img className={styles.pin} src={bolo} alt="bolo blanco" ref={ref5} data-isvisible={isV5 ? 'true' : 'false'} loading="lazy" />
+          <BoloBlanco className={styles.pin} ref={ref5} data-isvisible={isV5 ? 'true' : 'false'} />
         </div>
       </main>
       <article className={styles.article}>

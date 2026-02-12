@@ -33,11 +33,10 @@
 
 .pin {
   height: 0.78em;
-  filter: invert(1) invert(92%) sepia(61%) saturate(7411%) hue-rotate(331deg)
-    brightness(96%) contrast(88%);
+  filter: invert(1) invert(92%) sepia(61%) saturate(7411%) hue-rotate(331deg) brightness(96%) contrast(88%);
 }
 
-.pin > img {
+.bolo {
   height: 100%;
   object-fit: contain;
 }
