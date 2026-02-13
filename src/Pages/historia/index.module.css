@@ -60,7 +60,7 @@
 }
 
 .main header {
-  margin-left: -4.3;
+  margin-left: 1em;
   text-align: end;
   -ms-flex-item-align: end;
   align-self: flex-end;
