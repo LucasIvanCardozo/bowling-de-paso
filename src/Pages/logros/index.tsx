@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react'
 import styles from './index.module.css'
-import dbRecords from '../../lib/db/dbRecords.json'
 import useIntersection from '../../hooks/useIntersection'
 import Confetis from '../../components/Features/Confetis'
 import Anotacion from '../../components/Features/Anotacion'
 import Tarjeta from '../../components/Features/Tarjeta'
 import TarjetaAlbum from '../../components/Features/TarjetaAlbum'
-import type { People } from '../../types/people'
 import type { Scoreboard } from '../../types/scoreboard'
 import { useWidth } from '../../hooks/useWidth'
 import { Flecha, Viento, Elipse, CienPalos, CienPalosTexto } from '../../assets/svgs'
 import vaso from '@/assets/images/vaso100Palos.webp'
 import nube from '@/assets/images/nube.webp'
 import { Helmet } from 'react-helmet-async'
+import { recordsList } from '../../lib/db/repository/records.repository'
+import type { PlayerRecord } from '../../types/record'
 
 export default function Page() {
   const { width } = useWidth()
-  const [winners, setWinners] = useState<People[]>([])
-  const [totalPeople, setTotalPeople] = useState<People[]>([])
+  const [winners, setWinners] = useState<PlayerRecord[]>([])
+  const [totalPeople, setTotalPeople] = useState<PlayerRecord[]>([])
   const [scoreboard, setScoreboard] = useState<Scoreboard[]>([])
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLHeadingElement>({
     threshold: 0,
@@ -26,7 +26,7 @@ export default function Page() {
     threshold: 0,
   })
 
-  const people = dbRecords as unknown as People[]
+  const people = recordsList()
 
   useEffect(() => {
     const lastMonth = people
@@ -35,22 +35,22 @@ export default function Page() {
         const dateParse = Date.parse(person.date);
         return dateNow - dateParse < 2592000000 && dateNow - dateParse > 0;
       })*/
-      .sort((a, b) => (a.record > b.record ? -1 : 1))
+      .sort((a, b) => (a.score > b.score ? -1 : 1))
       .reduce((acc, item) => {
         const repeated = acc.filter((person) => person.name === item.name && person.lastName === item.lastName)
         if (repeated.length === 0) {
           acc.push(item)
         }
         return acc
-      }, [] as People[])
+      }, [] as PlayerRecord[])
 
-    const winnersAux = lastMonth.slice(0, 3) as People[]
+    const winnersAux = lastMonth.slice(0, 3) as PlayerRecord[]
     const totalPeopleAux = lastMonth.reduce((acc, item) => {
       if (!winnersAux.includes(item)) {
         acc.push(item)
       }
       return acc
-    }, [] as People[])
+    }, [] as PlayerRecord[])
     setWinners(winnersAux)
     setTotalPeople(totalPeopleAux)
   }, [people])
@@ -192,14 +192,14 @@ export default function Page() {
               </h2>
             </div>
             <ul>
-              {winners.map(({ name, lastName, age, record }, index) => (
+              {winners.map(({ name, lastName, age, score }, index) => (
                 <Tarjeta
                   key={name}
                   name={name}
                   lastName={lastName}
                   age={age}
                   img={`${import.meta.env.BASE_URL}records/${name}${lastName}.webp`}
-                  record={record}
+                  score={score}
                   pos={index + 1}
                 />
               ))}
@@ -208,14 +208,14 @@ export default function Page() {
           <section className={styles.album}>
             <h2>grandes jugadores del mes</h2>
             <ul>
-              {totalPeople.map(({ name, lastName, age, record }) => (
+              {totalPeople.map(({ name, lastName, age, score }) => (
                 <TarjetaAlbum
                   key={name}
                   name={name}
                   lastName={lastName}
                   age={age}
                   img={`${import.meta.env.BASE_URL}records/${name}${lastName}.webp`}
-                  record={record}
+                  score={score}
                 />
               ))}
             </ul>

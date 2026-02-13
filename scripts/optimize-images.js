@@ -17,6 +17,7 @@ for (const file of files) {
       width: 512,
       withoutEnlargement: true,
     })
+    .flatten({ background: '#ffffff' })
     .webp({ quality: 50, effort: 6 })
     .toFile(path.join(outputDir, `${base}.webp`))
 }

@@ -1,6 +1,7 @@
 export type MenuSubItem = {
   name: string
   description?: string
+  price?: number
 }
 
 export type MenuItem = {
@@ -34,5 +35,6 @@ export type MenuCategoryWithSub = {
 export type MenuCategory = MenuCategoryNoSub | MenuCategoryWithSub
 
 export type MenuDB = {
+  updatedAt: string
   categories: MenuCategory[]
 }

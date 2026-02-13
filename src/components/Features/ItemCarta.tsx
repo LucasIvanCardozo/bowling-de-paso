@@ -6,16 +6,16 @@ export default function ItemCarta({ item }: { item: MenuItem }) {
     <div className={styles.container}>
       <h2>{item.name}</h2>
       <ul>
-        {item.subItems.map((subItem) => (
-          <li className={styles.product} key={subItem.name}>
+        {item.subItems.map(({ name, description, price }) => (
+          <li className={styles.product} key={name}>
             <div className={styles.productData}>
-              <p className={styles.productName}>‧{subItem.name}</p>
+              <p className={styles.productName}>‧{name}</p>
               <div className={styles.dots}>
-                <p>...........................................................................</p>
+                <p>.......................................................................................................................</p>
               </div>
-              <p className={styles.productPrice}>$</p>
+              <p className={styles.productPrice}>{price ? `$${price}` : ''}</p>
             </div>
-            {subItem.description ? <p className={styles.productDescription}> ({subItem.description})</p> : ''}
+            {description ? <p className={styles.productDescription}> ({description})</p> : ''}
           </li>
         ))}
         {item.adicional && (

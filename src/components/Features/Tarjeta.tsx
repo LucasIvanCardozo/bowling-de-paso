@@ -4,20 +4,17 @@ import medal1 from '@/assets/images/medal1.webp'
 import medal2 from '@/assets/images/medal2.webp'
 import medal3 from '@/assets/images/medal3.webp'
 import { BoloBlanco } from '../../assets/svgs'
+import type { PlayerRecord } from '../../types/record'
 
 export default function Tarjeta({
   name,
   lastName,
   age,
   img,
-  record,
+  score,
   pos,
-}: {
-  name: string
-  lastName: string
-  age: number
+}: Omit<PlayerRecord, 'id' | 'date'> & {
   img: string
-  record: string
   pos: number
 }) {
   const [verInfo, setVerInfo] = useState(false)
@@ -46,11 +43,11 @@ export default function Tarjeta({
           <p>
             {name} {lastName}
           </p>
-          <p className={styles.personAge}>{age} años</p>
+          <p className={styles.personAge}>{age ? `${age} años` : ''}</p>
         </div>
         <div className={styles.personRecord}>
           <BoloBlanco className={styles.bolo} />
-          <p>{record}</p>
+          <p>{score}</p>
         </div>
       </div>
     </li>

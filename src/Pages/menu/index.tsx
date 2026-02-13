@@ -2,13 +2,13 @@ import { useState } from 'react'
 import styles from './index.module.css'
 import ItemCarta from '../../components/Features/ItemCarta'
 import Marcas from '../../components/Features/Marcas'
-import menuData from '../../lib/db/menuData.json'
 import useIntersection from '../../hooks/useIntersection'
 import type { MenuCategory, MenuSubCategory } from '../../types/menu'
 import { Helmet } from 'react-helmet-async'
+import { menuList } from '../../lib/db/repository/menu.repository'
 
 export default function Page() {
-  const categories = menuData.categories as MenuCategory[]
+  const categories = menuList()
   const [categoryIndex, setCategoryIndex] = useState(0)
   const [pagina, setPagina] = useState({ categoryId: 0, subcategoryId: 0 })
 

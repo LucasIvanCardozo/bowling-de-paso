@@ -1,7 +1,8 @@
 import styles from './tarjetaAlbum.module.css'
 import { BoloBlanco } from '../../assets/svgs'
+import type { PlayerRecord } from '../../types/record'
 
-export default function TarjetaAlbum({ name, lastName, age, img, record }: { name: string; lastName: string; age: number; img: string; record: string }) {
+export default function TarjetaAlbum({ name, lastName, age, img, score }: Omit<PlayerRecord, 'id' | 'date'> & { img: string }) {
   return (
     <li className={styles.container}>
       <img src={img} alt={`Imagen de ${name} ${lastName}`} loading="lazy" />
@@ -10,9 +11,9 @@ export default function TarjetaAlbum({ name, lastName, age, img, record }: { nam
           {name} {lastName}
         </p>
         <div className={styles.underLine}>
-          <p>{age} años</p>
+          <p>{age ? `${age} años` : ''}</p>
           <div className={styles.record}>
-            <p>{record}</p>
+            <p>{score}</p>
             <div className={styles.pin}>
               <BoloBlanco />
             </div>
