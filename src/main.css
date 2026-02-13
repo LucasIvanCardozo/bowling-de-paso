@@ -22,6 +22,7 @@ html,
 body {
   overflow-x: hidden;
   overscroll-behavior-x: none;
+  font-family: bebasNeue, 'Arial Narrow', 'Helvetica Neue Condensed', 'Roboto Condensed', sans-serif;
 }
 
 html {
