@@ -7,7 +7,7 @@
   width: 100%;
   height: 100vw;
   min-height: 18em;
-  max-height: 80vh;
+  max-height: 60vh;
   margin: auto;
   margin-top: -5vh;
   overflow: hidden;
@@ -396,6 +396,12 @@ h1 {
   gap: 0.3em;
   width: 95vw;
   max-width: 900px;
+}
+
+.sectionFirst,
+.sectionSecond,
+.sectionThird {
+  font-family: arialRounded;
 }
 
 .sectionThird h2 {

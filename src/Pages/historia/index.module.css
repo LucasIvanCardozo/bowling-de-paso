@@ -139,6 +139,11 @@
   background-color: #555;
 }
 
+.article p {
+  font-family: arialRounded;
+  margin-top: 5px;
+}
+
 .sectionsList {
   display: -webkit-box;
   display: -ms-flexbox;

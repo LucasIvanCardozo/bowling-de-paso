@@ -1,35 +1,36 @@
-.container{
+.container {
   background-color: #222222;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 1em 0;
+  font-family: arialRounded;
 }
 
-.container  a {
+.container a {
   color: #fff;
 }
 
-.ul{
+.ul {
   display: flex;
   position: relative;
   gap: 2em;
   height: 1.8em;
   filter: grayscale(0);
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
-.li{
+.li {
   height: 100%;
 }
 
-.img{
+.img {
   height: 100%;
   width: 100%;
   aspect-ratio: 1/1;
@@ -37,31 +38,30 @@
   filter: grayscale(0.2);
 }
 
-.socialText{
- max-width: 80%;
- position: relative;
+.socialText {
+  max-width: 80%;
+  position: relative;
 }
 
-.socialText > p{
-  font-size: .9em;
+.socialText > p {
+  font-size: 0.9em;
   width: 100%;
   text-align: center;
-  margin: .5em 0;
+  margin: 0.5em 0;
   color: #eee;
 }
 
-
-.terms{
+.terms {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5px;
-  font-size: .65em;
+  font-size: 0.65em;
 }
 
-.terms > p{
+.terms > p {
   margin: 0 3px;
   text-align: center;
 }

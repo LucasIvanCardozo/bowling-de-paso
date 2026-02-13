@@ -82,9 +82,9 @@ function Page() {
               <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
             </div>
             <p>
-              ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <b>líneas gratis</b> y disfrutar de diversión asegurada.
-              Además, te ofrecemos una variedad de comidas, cervezas y cócteles en un ambiente increíble. ¡Te esperamos para vivir momentos geniales! Es el plan
-              perfecto <b>para vos</b>. ¡No te lo podés perder!
+              ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <strong>líneas gratis</strong> y disfrutar de diversión
+              asegurada. Además, te ofrecemos una variedad de comidas, cervezas y cócteles en un ambiente increíble. ¡Te esperamos para vivir momentos geniales!
+              Es el plan perfecto <strong>para vos</strong>. ¡No te lo podés perder!
             </p>
           </div>
         </section>
@@ -96,8 +96,8 @@ function Page() {
             <h2> diversión!</h2>{' '}
             <p>
               ¡Sumérgete en una experiencia de entretenimiento completa en nuestro centro renovado! Aquí encontrarás una emocionante variedad de actividades
-              para disfrutar al máximo. Además del fascinante bowling, podés deleitarte con nuestras increíbles <b>maquinitas arcade</b> y nuestra{' '}
-              <b>mesa de pool profesional</b>. La diversión está garantizada para todos los gustos y edades.
+              para disfrutar al máximo. Además del fascinante bowling, podés deleitarte con nuestras increíbles <strong>maquinitas arcade</strong> y nuestra{' '}
+              <strong>mesa de pool profesional</strong>. La diversión está garantizada para todos los gustos y edades.
             </p>
           </div>
         </section>
