@@ -11,7 +11,7 @@ export default function Footer() {
           No dudes en escribirnos, ¡resolveremos <b>cualquier consulta que tengas!</b>
         </p>
         <p>
-          Celebra tu cumpleaños o reserva tus líneas <b>a partir de las 15hs</b>
+          Celebra tu cumpleaños o reserva tu lugar <b>a partir de las 17hs</b>
         </p>
         <p>
           <b>Solo por Whatsapp:</b>{' '}

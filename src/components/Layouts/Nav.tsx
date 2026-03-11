@@ -48,7 +48,7 @@ export default function Nav() {
       <ul className={styles.ul} data-open={menuOpen}>
         {navLinks.map((link, index) => (
           <li key={index}>
-            <NavLink className={({ isActive }) => (isActive ? styles.active : '') + ` ${styles.link}`} to={link.to} viewTransition>
+            <NavLink className={({ isActive }) => (isActive ? styles.active : '') + ` ${styles.link}`} to={link.to} target={link.target} viewTransition>
               {link.name}
             </NavLink>
           </li>
@@ -71,9 +71,14 @@ export default function Nav() {
 
 const navLinks = [
   { name: 'INICIO', to: '/' },
-  { name: 'MENU', to: '/menu' },
-  { name: 'LOGROS', to: '/logros' },
+  { name: 'MENU', to: 'https://qrcarta.com.ar/elbowlingdepaso/', target: '_blank' },
+  // { name: 'LOGROS', to: '/logros' },
   { name: 'HISTORIA', to: '/historia' },
+  {
+    name: 'UBICACIÓN',
+    to: 'https://www.google.com/maps/place/El+Bowling+de+Paso/@-38.0159517,-57.5613337,17.29z/data=!4m6!3m5!1s0x9584df5d0c001f8d:0x5a0fb1a6490539ac!8m2!3d-38.0159473!4d-57.5599896!16s%2Fg%2F11sj2ctp7r?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D',
+    target: '_blank',
+  },
 ]
 
 const scrollToId = (id: string) => {

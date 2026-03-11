@@ -1,5 +1,4 @@
 import styles from './marcas.module.css'
-
 import quilmes from '@/assets/images/quilmesLogo.webp'
 import patagonia from '@/assets/images/patagoniaLogo.webp'
 import stella from '@/assets/images/stellaLogo.webp'

@@ -6,6 +6,7 @@ import video from '@/assets/videos/video.mp4'
 import paraCambiar from '@/assets/images/paraCambiar.webp'
 import maquinita from '@/assets/images/maquinita.webp'
 import { Helmet } from 'react-helmet-async'
+import hojaDeLado from '@/assets/images/hojas-left.webp'
 
 function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLDivElement>({
@@ -43,6 +44,8 @@ function Page() {
         </div>
       </main>
       <article className={styles.article}>
+        <img className={styles.hoja1} src={hojaDeLado} alt="Hojas" />
+        <img className={styles.hoja2} src={hojaDeLado} alt="Hojas" />
         <section className={styles.intro}>
           <div className={styles.introText}>
             <p>Sabemos que lo importante es disfrutar de la compañía mutua.</p>

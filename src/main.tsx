@@ -5,8 +5,8 @@ import Index from './Pages/index.tsx'
 import Historia from './Pages/historia/index.tsx'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Pages/layout.tsx'
-import Logros from './Pages/logros/index.tsx'
-import Menu from './Pages/menu/index.tsx'
+// import Logros from './Pages/logros/index.tsx'
+// import Menu from './Pages/menu/index.tsx'
 import { HelmetProvider } from 'react-helmet-async'
 
 const router = createHashRouter([
@@ -21,14 +21,14 @@ const router = createHashRouter([
         path: '/historia',
         Component: Historia,
       },
-      {
-        path: '/logros',
-        Component: Logros,
-      },
-      {
-        path: '/menu',
-        Component: Menu,
-      },
+      // {
+      //   path: '/logros',
+      //   Component: Logros,
+      // },
+      // {
+      //   path: '/menu',
+      //   Component: Menu,
+      // },
     ],
   },
 ])
