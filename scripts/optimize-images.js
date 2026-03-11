@@ -18,5 +18,5 @@ for (const file of files) {
       withoutEnlargement: true,
     })
     .webp({ quality: 75, effort: 6 })
-    .toFile(path.join(outputDir, `${base}.webp`))
+    .toFile(path.join(outputDir, `${base}.svg`))
 }
