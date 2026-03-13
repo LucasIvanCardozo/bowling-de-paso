@@ -4,6 +4,9 @@ import LogoTexto from '../components/Features/LogoTexto'
 import { Estrellas, BoloBlanco } from '../assets/svgs'
 import video from '@/assets/videos/video.mp4'
 import paraCambiar from '@/assets/images/paraCambiar.webp'
+import paraCambiar2 from '@/assets/images/paracambiar2.webp'
+import paraCambiar3 from '@/assets/images/paracambiar3.webp'
+import paraCambiar4 from '@/assets/images/paracambiar4.webp'
 import maquinita from '@/assets/images/maquinita.webp'
 import { Helmet } from 'react-helmet-async'
 import hojaDeLado from '@/assets/images/hojas-left.webp'
@@ -83,9 +86,9 @@ function Page() {
           <div className={styles.sectionSecondData}>
             <div className={styles.sectionSecondImg} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'}>
               <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
-              <img src={maquinita} alt="imagen del bowling" loading="lazy" />
-              <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
-              <img src={maquinita} alt="imagen del bowling" loading="lazy" />
+              <img src={paraCambiar2} alt="imagen del bowling" loading="lazy" />
+              <img src={paraCambiar3} alt="imagen del bowling" loading="lazy" />
+              <img src={paraCambiar4} alt="imagen del bowling" loading="lazy" />
             </div>
             <p>
               ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <strong>líneas gratis</strong> y disfrutar de diversión
