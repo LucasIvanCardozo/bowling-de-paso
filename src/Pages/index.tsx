@@ -83,6 +83,9 @@ function Page() {
           <div className={styles.sectionSecondData}>
             <div className={styles.sectionSecondImg} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'}>
               <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
+              <img src={maquinita} alt="imagen del bowling" loading="lazy" />
+              <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
+              <img src={maquinita} alt="imagen del bowling" loading="lazy" />
             </div>
             <p>
               ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <strong>líneas gratis</strong> y disfrutar de diversión
