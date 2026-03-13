@@ -1,15 +1,15 @@
-import styles from './index.module.css'
-import useIntersection from '../hooks/useIntersection'
-import LogoTexto from '../components/Features/LogoTexto'
-import { Estrellas, BoloBlanco } from '../assets/svgs'
-import video from '@/assets/videos/video.mp4'
-import paraCambiar from '@/assets/images/paraCambiar.webp'
-import paraCambiar2 from '@/assets/images/paracambiar2.webp'
-import paraCambiar3 from '@/assets/images/paracambiar3.webp'
-import paraCambiar4 from '@/assets/images/paracambiar4.webp'
-import maquinita from '@/assets/images/maquinita.webp'
-import { Helmet } from 'react-helmet-async'
-import hojaDeLado from '@/assets/images/hojas-left.webp'
+import styles from './index.module.css';
+import useIntersection from '../hooks/useIntersection';
+import LogoTexto from '../components/features/LogoTexto';
+import { Estrellas, BoloBlanco } from '../assets/svgs';
+import video from '@/assets/videos/video.mp4';
+import paraCambiar from '@/assets/images/paraCambiar.webp';
+import paraCambiar2 from '@/assets/images/paracambiar2.webp';
+import paraCambiar3 from '@/assets/images/paracambiar3.webp';
+import paraCambiar4 from '@/assets/images/paracambiar4.webp';
+import maquinita from '@/assets/images/maquinita.webp';
+import { Helmet } from 'react-helmet-async';
+import hojaDeLado from '@/assets/images/hojas-left.webp';
 
 function Page() {
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLDivElement>({

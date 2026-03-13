@@ -1,32 +1,38 @@
-import { useEffect, useState } from 'react'
-import styles from './index.module.css'
-import useIntersection from '../../hooks/useIntersection'
-import Confetis from '../../components/Features/Confetis'
-import Anotacion from '../../components/Features/Anotacion'
-import Tarjeta from '../../components/Features/Tarjeta'
-import TarjetaAlbum from '../../components/Features/TarjetaAlbum'
-import type { Scoreboard } from '../../types/scoreboard'
-import { useWidth } from '../../hooks/useWidth'
-import { Flecha, Viento, Elipse, CienPalos, CienPalosTexto } from '../../assets/svgs'
-import vaso from '@/assets/images/vaso100Palos.webp'
-import nube from '@/assets/images/nube.webp'
-import { Helmet } from 'react-helmet-async'
-import { recordsList } from '../../lib/db/repository/records.repository'
-import type { PlayerRecord } from '../../types/record'
+import { useEffect, useState } from 'react';
+import styles from './index.module.css';
+import useIntersection from '../../hooks/useIntersection';
+import Confetis from '../../components/features/Confetis';
+import Anotacion from '../../components/features/Anotacion';
+import Tarjeta from '../../components/features/Tarjeta';
+import TarjetaAlbum from '../../components/features/TarjetaAlbum';
+import type { Scoreboard } from '../../types/scoreboard';
+import { useWidth } from '../../hooks/useWidth';
+import {
+  Flecha,
+  Viento,
+  Elipse,
+  CienPalos,
+  CienPalosTexto,
+} from '../../assets/svgs';
+import vaso from '@/assets/images/vaso100Palos.webp';
+import nube from '@/assets/images/nube.webp';
+import { Helmet } from 'react-helmet-async';
+import { recordsList } from '../../lib/db/repository/records.repository';
+import type { PlayerRecord } from '../../types/record';
 
 export default function Page() {
-  const { width } = useWidth()
-  const [winners, setWinners] = useState<PlayerRecord[]>([])
-  const [totalPeople, setTotalPeople] = useState<PlayerRecord[]>([])
-  const [scoreboard, setScoreboard] = useState<Scoreboard[]>([])
+  const { width } = useWidth();
+  const [winners, setWinners] = useState<PlayerRecord[]>([]);
+  const [totalPeople, setTotalPeople] = useState<PlayerRecord[]>([]);
+  const [scoreboard, setScoreboard] = useState<Scoreboard[]>([]);
   const { ref: ref1, isVisible: isV1 } = useIntersection<HTMLHeadingElement>({
     threshold: 0,
-  })
+  });
   const { ref: ref2, isVisible: isV2 } = useIntersection<SVGSVGElement>({
     threshold: 0,
-  })
+  });
 
-  const people = recordsList()
+  const people = recordsList();
 
   useEffect(() => {
     const lastMonth = people
@@ -37,41 +43,44 @@ export default function Page() {
       })*/
       .sort((a, b) => (a.score > b.score ? -1 : 1))
       .reduce((acc, item) => {
-        const repeated = acc.filter((person) => person.name === item.name && person.lastName === item.lastName)
+        const repeated = acc.filter(
+          (person) =>
+            person.name === item.name && person.lastName === item.lastName,
+        );
         if (repeated.length === 0) {
-          acc.push(item)
+          acc.push(item);
         }
-        return acc
-      }, [] as PlayerRecord[])
+        return acc;
+      }, [] as PlayerRecord[]);
 
-    const winnersAux = lastMonth.slice(0, 3) as PlayerRecord[]
+    const winnersAux = lastMonth.slice(0, 3) as PlayerRecord[];
     const totalPeopleAux = lastMonth.reduce((acc, item) => {
       if (!winnersAux.includes(item)) {
-        acc.push(item)
+        acc.push(item);
       }
-      return acc
-    }, [] as PlayerRecord[])
-    setWinners(winnersAux)
-    setTotalPeople(totalPeopleAux)
-  }, [people])
+      return acc;
+    }, [] as PlayerRecord[]);
+    setWinners(winnersAux);
+    setTotalPeople(totalPeopleAux);
+  }, [people]);
 
   useEffect(() => {
-    const scoreboardAux = [] as Scoreboard[]
+    const scoreboardAux = [] as Scoreboard[];
     for (let i = 0; i < 10; i++) {
       if (i === 0) {
-        const randomDer = Math.floor(Math.random() * 8)
-        const randomIzq = Math.floor(Math.random() * 9 - randomDer)
-        const suma = randomDer + randomIzq
-        scoreboardAux.push({ der: randomDer, izq: randomIzq, sum: suma })
+        const randomDer = Math.floor(Math.random() * 8);
+        const randomIzq = Math.floor(Math.random() * 9 - randomDer);
+        const suma = randomDer + randomIzq;
+        scoreboardAux.push({ der: randomDer, izq: randomIzq, sum: suma });
       } else {
-        const randomDer = Math.floor(Math.random() * 8)
-        const randomIzq = Math.floor(Math.random() * (10 - randomDer))
-        const sumaTotal = randomIzq + randomDer + scoreboardAux[i - 1].sum
-        scoreboardAux.push({ der: randomDer, izq: randomIzq, sum: sumaTotal })
+        const randomDer = Math.floor(Math.random() * 8);
+        const randomIzq = Math.floor(Math.random() * (10 - randomDer));
+        const sumaTotal = randomIzq + randomDer + scoreboardAux[i - 1].sum;
+        scoreboardAux.push({ der: randomDer, izq: randomIzq, sum: sumaTotal });
       }
     }
-    setScoreboard(scoreboardAux)
-  }, [])
+    setScoreboard(scoreboardAux);
+  }, []);
 
   return (
     <>
@@ -116,13 +125,29 @@ export default function Page() {
               sum={scoreboard[2] && scoreboard[2].sum}
               width={width}
             />
-            <Anotacion der={scoreboard[3] && scoreboard[3].der} izq={scoreboard[3] && scoreboard[3].izq} sum={scoreboard[3] && scoreboard[3].sum} />
-            <Anotacion der={scoreboard[4] && scoreboard[4].der} izq={scoreboard[4] && scoreboard[4].izq} sum={scoreboard[4] && scoreboard[4].sum} />
+            <Anotacion
+              der={scoreboard[3] && scoreboard[3].der}
+              izq={scoreboard[3] && scoreboard[3].izq}
+              sum={scoreboard[3] && scoreboard[3].sum}
+            />
+            <Anotacion
+              der={scoreboard[4] && scoreboard[4].der}
+              izq={scoreboard[4] && scoreboard[4].izq}
+              sum={scoreboard[4] && scoreboard[4].sum}
+            />
           </div>
           <Anotacion special={true} />
           <div className={styles.boxesSide}>
-            <Anotacion der={scoreboard[5] && scoreboard[5].der} izq={scoreboard[5] && scoreboard[5].izq} sum={scoreboard[5] && scoreboard[5].sum} />
-            <Anotacion der={scoreboard[6] && scoreboard[6].der} izq={scoreboard[6] && scoreboard[6].izq} sum={scoreboard[6] && scoreboard[6].sum} />
+            <Anotacion
+              der={scoreboard[5] && scoreboard[5].der}
+              izq={scoreboard[5] && scoreboard[5].izq}
+              sum={scoreboard[5] && scoreboard[5].sum}
+            />
+            <Anotacion
+              der={scoreboard[6] && scoreboard[6].der}
+              izq={scoreboard[6] && scoreboard[6].izq}
+              sum={scoreboard[6] && scoreboard[6].sum}
+            />
             <Anotacion
               der={scoreboard[7] && scoreboard[7].der}
               izq={scoreboard[7] && scoreboard[7].izq}
@@ -147,14 +172,29 @@ export default function Page() {
           <Flecha className={styles.pin100Arrow} />
           <div>
             <div className={styles.pin100Animation}>
-              <Viento className={styles.pin100Wind} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'} />
+              <Viento
+                className={styles.pin100Wind}
+                ref={ref2}
+                data-isvisible={isV2 ? 'true' : 'false'}
+              />
               <div className={styles.pin100Ball}>
-                <Elipse className={styles.elipse} data-isvisible={isV2 ? 'true' : 'false'} />
-                <CienPalosTexto className={styles.pin100Text} data-isvisible={isV2 ? 'true' : 'false'} />
+                <Elipse
+                  className={styles.elipse}
+                  data-isvisible={isV2 ? 'true' : 'false'}
+                />
+                <CienPalosTexto
+                  className={styles.pin100Text}
+                  data-isvisible={isV2 ? 'true' : 'false'}
+                />
               </div>
               <CienPalos className={styles.pin100Pins} fill="black" />
             </div>
-            <img className={styles.pin100Glass} src={vaso} alt="Vaso de regalo" loading="lazy" />
+            <img
+              className={styles.pin100Glass}
+              src={vaso}
+              alt="Vaso de regalo"
+              loading="lazy"
+            />
           </div>
         </section>
         {/*  <section className={styles.pin130}>
@@ -188,7 +228,9 @@ export default function Page() {
               <img src={nube} alt="Nube" loading="lazy" />
               <h2>
                 los cracks de <br />
-                {Intl.DateTimeFormat('es-ES', { month: 'long' }).format(+new Date() - 2592000000)}
+                {Intl.DateTimeFormat('es-ES', { month: 'long' }).format(
+                  +new Date() - 2592000000,
+                )}
               </h2>
             </div>
             <ul>
@@ -223,5 +265,5 @@ export default function Page() {
         </article>
       </article>
     </>
-  )
+  );
 }

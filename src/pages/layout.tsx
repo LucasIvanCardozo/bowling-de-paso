@@ -1,6 +1,6 @@
 import '../animations.css'
-import Footer from '../components/Layouts/Footer'
-import Nav from '../components/Layouts/Nav'
+import Footer from '../components/layouts/Footer'
+import Nav from '../components/layouts/Nav'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
