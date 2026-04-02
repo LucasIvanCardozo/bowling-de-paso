@@ -124,10 +124,10 @@ h1 {
 }
 
 .article {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 4em;
@@ -149,9 +149,9 @@ h1 {
 .hoja1,
 .hoja2 {
   position: absolute;
-  opacity: 0.15;
   width: 30%;
   min-width: 12em;
+  opacity: 0.15;
 }
 
 .hoja1 {
@@ -160,8 +160,8 @@ h1 {
 }
 
 .hoja2 {
-  bottom: 0;
   right: 0;
+  bottom: 0;
   transform: rotate(180deg);
 }
 
@@ -366,10 +366,10 @@ h1 {
 
 .sectionSecondImg {
   position: relative;
-  opacity: 0;
   width: 85vw;
   max-width: 35em;
   aspect-ratio: 16/9;
+  opacity: 0;
   -webkit-box-shadow: 0 0 5px 1px #000;
   box-shadow: 0 0 5px 1px #000;
   -webkit-transform: translateX(50%);
@@ -401,14 +401,14 @@ h1 {
 }
 
 .sectionSecondImg img {
-  display: block;
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
+  opacity: 0;
   -o-object-fit: cover;
   object-fit: cover;
-  opacity: 0;
   animation: fade 16s linear infinite;
 }
 
@@ -447,10 +447,10 @@ h1 {
 /* Preferencias de accesibilidad */
 @media (prefers-reduced-motion: reduce) {
   .slideshow.css img {
-    animation: none;
-    opacity: 1;
     position: static;
     display: block;
+    opacity: 1;
+    animation: none;
   }
 }
 
@@ -463,29 +463,18 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   gap: 0.3em;
-  width: 95vw;
-  max-width: 900px;
-}
-
-.sectionFirst,
-.sectionSecond,
-.sectionThird {
-  font-family: arialRounded;
-}
-
-.sectionThird h2 {
-  font-family: bebasNeue;
-  font-size: 3.5em;
-  text-transform: uppercase;
-  -webkit-filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
-    drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
-  filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
+  align-items: center;
+  width: 85vw;
+  max-width: 770px;
 }
 
 .sectionThirdImg {
-  height: 60vw;
-  max-height: 400px;
-  aspect-ratio: 9/16;
+  flex-shrink: 0;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 30vw;
+  max-width: 250px;
   opacity: 0;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -508,6 +497,21 @@ h1 {
     -webkit-transform 1s;
 }
 
+.sectionFirst,
+.sectionSecond,
+.sectionThird {
+  font-family: arialRounded;
+}
+
+.sectionThird h2 {
+  font-family: bebasNeue;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  -webkit-filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
+  filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 1px #fff);
+}
+
 .sectionThirdImg[data-isvisible='true'] {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -515,16 +519,66 @@ h1 {
   transform: translateX(0);
 }
 .sectionThirdImg img {
+  position: absolute;
+  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  opacity: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  animation: fade 16s linear infinite;
+}
+
+.sectionThirdImg img:nth-child(1) {
+  animation-delay: 0s;
+}
+.sectionThirdImg img:nth-child(2) {
+  animation-delay: 4s;
+}
+.sectionThirdImg img:nth-child(3) {
+  animation-delay: 8s;
+}
+.sectionThirdImg img:nth-child(4) {
+  animation-delay: 12s;
 }
 
 .sectionThird p {
   margin: 0;
+}
+
+@media screen and (min-width: 481px) {
+  .sectionThird {
+    align-items: normal;
+  }
+
+  .sectionThirdImg {
+    flex-shrink: 0;
+    height: 60vw;
+    max-height: 400px;
+    width: 30vw;
+    max-width: 250px;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition:
+      opacity 1s,
+      -webkit-transform 1s;
+    transition:
+      opacity 1s,
+      -webkit-transform 1s;
+    -o-transition:
+      transform 1s,
+      opacity 1s;
+    transition:
+      transform 1s,
+      opacity 1s;
+    transition:
+      transform 1s,
+      opacity 1s,
+      -webkit-transform 1s;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
