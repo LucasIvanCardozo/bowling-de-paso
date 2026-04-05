@@ -3,14 +3,22 @@ import useIntersection from '../hooks/useIntersection'
 import LogoTexto from '../components/features/LogoTexto'
 import { Estrellas, BoloBlanco } from '../assets/svgs'
 import video from '@/assets/videos/video.mp4'
-import paraCambiar from '@/assets/images/home1.jpg'
-import paraCambiar2 from '@/assets/images/home2.jpg'
-import paraCambiar3 from '@/assets/images/paracambiar3.webp'
-import paraCambiar4 from '@/assets/images/paracambiar4.webp'
-import section1 from '@/assets/images/section1.jpg'
-import section2 from '@/assets/images/section2.jpg'
-import section3 from '@/assets/images/section3.jpg'
-import section4 from '@/assets/images/section4.jpg'
+import pistaBowling from '@/assets/images/section-2/pista_bowling.webp'
+import genteDelStaff from '@/assets/images/section-2/gente_del_staff.webp'
+import genteComiendoMucha from '@/assets/images/section-2/gente_comiendo_mucha.webp'
+import genteComiendo from '@/assets/images/section-2/gente_comiendo.webp'
+import chicaTirandoBowling from '@/assets/images/section-2/chica_tirando_bowling.webp'
+import aPuntoDeTirar from '@/assets/images/section-2/a_ punto_de_tirar_en_pista.webp'
+import pool from '@/assets/images/section-fun/pool.webp'
+import maquinitas from '@/assets/images/section-fun/maquinitas.webp'
+import hombresJugandoMaquinitas from '@/assets/images/section-fun/hombres-jugando-maquinitas.webp'
+import ninoJugandoMaquinitas from '@/assets/images/section-fun/niño-jugando-maquinitas.webp'
+import comida from '@/assets/images/section-fun/comida.webp'
+import tragoFrutosRojos from '@/assets/images/section-fun/trago-frutos-rojos.webp'
+import tragoLimon from '@/assets/images/section-fun/trago-limon.webp'
+import sirviendoUnTrago from '@/assets/images/section-fun/sirviendo-un-trago.webp'
+import genteBrindando from '@/assets/images/section-fun/gente-brindando.webp'
+import trofeo from '@/assets/images/section-fun/trofeo.webp'
 import { Helmet } from 'react-helmet-async'
 import hojaDeLado from '@/assets/images/hojas-left.webp'
 
@@ -88,10 +96,12 @@ function Page() {
           <h2>qué&nbsp;podemos ofrecerte?</h2>
           <div className={styles.sectionSecondData}>
             <div className={styles.sectionSecondImg} ref={ref2} data-isvisible={isV2 ? 'true' : 'false'}>
-              <img src={paraCambiar} alt="imagen del bowling" loading="lazy" />
-              <img src={paraCambiar2} alt="imagen del bowling" loading="lazy" />
-              <img src={paraCambiar3} alt="imagen del bowling" loading="lazy" />
-              <img src={paraCambiar4} alt="imagen del bowling" loading="lazy" />
+            <img src={pistaBowling} alt="Pista de bowling" loading="lazy" />
+            <img src={aPuntoDeTirar} alt="Persona a punto de tirar en pista" loading="lazy" />
+            <img src={chicaTirandoBowling} alt="Chica tirando bowling" loading="lazy" />
+            <img src={genteDelStaff} alt="Staff del bowling" loading="lazy" />
+            <img src={genteComiendo} alt="Personas comiendo" loading="lazy" />
+            <img src={genteComiendoMucha} alt="Variedad gastronómica" loading="lazy" />
             </div>
             <p>
               ¡Vení a nuestro bowling y pasá un rato inolvidable! Podés festejar tu cumpleaños, ganar <strong>líneas gratis</strong> y disfrutar de diversión
@@ -102,10 +112,16 @@ function Page() {
         </section>
         <section className={styles.sectionThird}>
           <div className={styles.sectionThirdImg} ref={ref3} data-isvisible={isV3 ? 'true' : 'false'}>
-            <img src={section1} alt="imagen del bowling" loading="lazy" />
-            <img src={section2} alt="imagen del bowling" loading="lazy" />
-            <img src={section3} alt="imagen del bowling" loading="lazy" />
-            <img src={section4} alt="imagen del bowling" loading="lazy" />
+            <img src={pool} alt="Mesa de pool profesional" loading="lazy" />
+            <img src={maquinitas} alt="Máquinas arcade" loading="lazy" />
+            <img src={hombresJugandoMaquinitas} alt="Personas jugando máquinas arcade" loading="lazy" />
+            <img src={ninoJugandoMaquinitas} alt="Niño jugando máquinas arcade" loading="lazy" />
+            <img src={comida} alt="Opciones gastronómicas" loading="lazy" />
+            <img src={tragoFrutosRojos} alt="Trago de frutos rojos" loading="lazy" />
+            <img src={tragoLimon} alt="Trago de limón" loading="lazy" />
+            <img src={sirviendoUnTrago} alt="Preparación de cócteles" loading="lazy" />
+            <img src={genteBrindando} alt="Personas brindando" loading="lazy" />
+            <img src={trofeo} alt="Trofeo de competencia" loading="lazy" />
           </div>
           <div>
             <h2> diversión!</h2>{' '}

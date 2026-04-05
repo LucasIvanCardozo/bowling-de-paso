@@ -1,17 +1,16 @@
 import type { SVGProps, Ref } from 'react'
 import { forwardRef } from 'react'
+
 const SvgBoloBlanco = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 860" ref={ref} {...props}>
-    <path
-      d="M1318 138h1a80 80 0 0 1 80 80s4.16 31.777-4 90c-6.68 36.969-28.32 75.813-12 164 .31 20.313 77 164.083 77 276 0 140.151-61 250-61 250h-163s-60-116.836-60-257c0-110.091 55.67-181.524 82-274 13.24-67.158-6.81-119.26-14-157-9.67-50.767-8-90-8-90a82 82 0 0 1 82-82"
-      data-name="Rect\xE1ngulo 10"
-      style={{
-        fill: '#f1f1f1',
-        fillRule: 'evenodd',
-      }}
-      transform="translate(-1176 -138)"
-    />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.84578 312.47946" ref={ref} {...props}>
+    <g transform="matrix(3.7795276,0,0,3.7795276,-335.48192,-406.96645)">
+      <path
+        d="m 98.837513,190.3534 h 8.249477 c 0,0 10.73163,-9.26068 10.73163,-23.48244 0,-14.22175 -9.12553,-23.48244 -9.12553,-28.19546 0,-4.71303 2.04412,-9.83947 2.04412,-13.39491 0,-3.55544 -3.21219,-7.93773 -6.57038,-7.93773 -3.3582,0 -6.716398,4.2996 -6.716398,7.77236 0,3.72081 1.314071,9.09531 1.314071,13.80833 0,4.71303 -10.001579,15.37935 -10.001579,28.19546 0,12.81613 10.074589,23.23439 10.074589,23.23439 z"
+        fill="#ffffff"
+      />
+    </g>
   </svg>
 )
+
 const ForwardRef = forwardRef(SvgBoloBlanco)
 export default ForwardRef
