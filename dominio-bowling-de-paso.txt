@@ -1,0 +1,49 @@
+DOCUMENTACIÓN DE RELACIÓN DOMINIO - NIC Argentina
+================================================
+
+OBJETO: Demostrar la relación entre el nombre de dominio bowlingdepaso.com.ar y la actividad comercial del titular.
+
+---
+
+DATOS DEL DOMINIO
+-----------------
+Nombre de dominio: bowlingdepaso.com.ar
+
+---
+
+DATOS DEL TITULAR
+-----------------
+Nombre del negocio: BOWLING DE PASO
+Actividad comercial: Centro de entretenimiento - Bowling y actividades recreativas
+
+---
+
+DESCRIPCIÓN DE LA ACTIVIDAD
+---------------------------
+Bowling de Paso es un centro de bowling y entretenimiento ubicado en Mar del 
+Plata, Buenos Aires, Argentina. El establecimiento ofrece pistas de bowling, 
+mesas de pool, máquinas arcade, servicio de bar y gastronomía.
+
+---
+
+RELACIÓN DOMINIO - NEGOCIO
+-------------------------
+El nombre de dominio "bowlingdepaso.com.ar" mantiene relación directa con la 
+actividad comercial por incluir textualmente el nombre comercial del negocio.
+
+La extensión ".com.ar" corresponde al ccTLD de Argentina, indicando que el 
+negocio opera en territorio argentino.
+
+---
+
+USO PREVISTO DEL SITIO WEB
+--------------------------
+Sitio web institucional con información sobre servicios, horarios, ubicación, 
+eventos y contacto del negocio.
+
+---
+
+DECLARACIÓN
+----------
+El titular declara que el nombre de dominio solicitado tiene relación directa 
+con el nombre comercial del negocio Bowling de Paso.

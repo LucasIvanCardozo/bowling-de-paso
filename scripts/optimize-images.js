@@ -14,7 +14,7 @@ for (const file of files) {
 
   await sharp(path.join(inputDir, file))
     .resize({
-      width: 768,
+      width: 1440,
       withoutEnlargement: true,
     })
     .webp({ quality: 75, effort: 6 })
