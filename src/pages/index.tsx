@@ -96,13 +96,6 @@ function Page() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className={styles.scrollIndicator}>
-          <div className={styles.scrollMouse}>
-            <div className={styles.scrollWheel} />
-          </div>
-          <span className={styles.scrollText}>Desplazá para ver más</span>
-        </div>
       </main>
 
       {/* Rest of the content - keeping existing sections below */}
