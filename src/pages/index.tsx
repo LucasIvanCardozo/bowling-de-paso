@@ -42,7 +42,7 @@ function Page() {
         <title>Bowling de Paso</title>
         <meta
           name="description"
-          content="Diviértete en nuestro moderno bowling en Mar del Plata. Bolos, aperitivos y diversión para todas las edades. ¡Únete! Abierto de 17hs a 2:30hs."
+          content="Diviértete en nuestro moderno bowling en Mar del Plata. Bolos, aperitivos y diversión para todas las edades. ¡Únete! Abierto de 18hs a 2:00hs."
         />
       </Helmet>
 
@@ -73,7 +73,7 @@ function Page() {
             <div className={styles.infoDivider} />
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Horario</span>
-              <span className={styles.infoValue}>17hs - 2:30hs</span>
+              <span className={styles.infoValue}>18hs - 2:00hs</span>
             </div>
             <div className={styles.infoDivider} />
             <div className={styles.infoItem}>

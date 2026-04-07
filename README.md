@@ -13,7 +13,7 @@ Bienvenido a Bowling de Paso, donde la diversión no tiene límites. Somos un ce
 ### 📍 Ubicación Actual
 
 🏠 **Córdoba 3766, Buenos Aires**  
-🕐 **Abierto todos los días de 17:00 a 02:30 hs**
+🕐 **Abierto todos los días de 17:00 a 02:00 hs**
 
 ---
 
