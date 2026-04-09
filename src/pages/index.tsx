@@ -43,7 +43,6 @@ function Page() {
     <>
       <Helmet>
         <title>Bowling de Paso</title>
-<<<<<<< HEAD
         <meta
           name="description"
           content="Diviértete en nuestro moderno bowling en Mar del Plata. Bolos, aperitivos y diversión para todas las edades. ¡Únete! Abierto de 18hs a 2:00hs."
@@ -94,9 +93,6 @@ function Page() {
             "https://www.facebook.com/elbowlingdepaso2442"
           ]
         }) }} />
-=======
-        <meta name="description" content={metaDescription} />
->>>>>>> 55c35e7 (feat: implement seasonal schedule hook and update footer and index pages to display hours)
       </Helmet>
 
       {/* Hero Section - Completely Redesigned */}
