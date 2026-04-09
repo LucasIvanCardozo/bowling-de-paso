@@ -1,17 +1,19 @@
 import styles from './footer.module.css'
+import { useSeasonalSchedule } from '../../hooks/useSeasonalSchedule'
 import whatsapp from '@/assets/images/whatsappLogo.webp'
 import instagram from '@/assets/images/instagramLogo.webp'
 import facebook from '@/assets/images/facebookLogo.webp'
 
 export default function Footer() {
+  const { badge, hours, season } = useSeasonalSchedule()
   return (
     <div className={styles.container}>
       <div className={styles.socialText} id="contactanos">
         <p>
           No dudes en escribirnos, ¡resolveremos <b>cualquier consulta que tengas!</b>
         </p>
-        <p>
-          Celebra tu cumpleaños o reserva tu lugar <b>a partir de las 18hs</b>
+        <p className={styles.hoursLine}>
+          <span>Horarios: {hours.lines.join(season === 'summer' ? '' : ' / ')}</span>
         </p>
         <p>
           <b>Solo por Whatsapp:</b>{' '}

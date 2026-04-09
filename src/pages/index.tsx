@@ -1,5 +1,6 @@
 import styles from './index.module.css'
 import useIntersection from '../hooks/useIntersection'
+import { useSeasonalSchedule } from '../hooks/useSeasonalSchedule'
 import logo from '@/assets/images/logo.webp'
 import fondoHojas from '@/assets/images/fondo-hojas.webp'
 import video from '@/assets/videos/video.mp4'
@@ -23,6 +24,8 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
 function Page() {
+  const { badge, hours, metaDescription } = useSeasonalSchedule()
+
   const { ref: logoRef, isVisible: logoVisible } = useIntersection<HTMLDivElement>({
     threshold: 0.1,
   })
@@ -40,6 +43,7 @@ function Page() {
     <>
       <Helmet>
         <title>Bowling de Paso</title>
+<<<<<<< HEAD
         <meta
           name="description"
           content="Diviértete en nuestro moderno bowling en Mar del Plata. Bolos, aperitivos y diversión para todas las edades. ¡Únete! Abierto de 18hs a 2:00hs."
@@ -90,6 +94,9 @@ function Page() {
             "https://www.facebook.com/elbowlingdepaso2442"
           ]
         }) }} />
+=======
+        <meta name="description" content={metaDescription} />
+>>>>>>> 55c35e7 (feat: implement seasonal schedule hook and update footer and index pages to display hours)
       </Helmet>
 
       {/* Hero Section - Completely Redesigned */}
@@ -119,7 +126,13 @@ function Page() {
             <div className={styles.infoDivider} />
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Horario</span>
-              <span className={styles.infoValue}>18hs - 2:00hs</span>
+              <div className={styles.hoursContainer}>
+                {hours.lines.map((line, index) => (
+                  <span key={index} className={styles.infoValue}>
+                    {line}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className={styles.infoDivider} />
             <div className={styles.infoItem}>
