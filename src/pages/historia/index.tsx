@@ -29,7 +29,7 @@ export default function Page() {
         <meta property="og:title" content="Historia - Bowling de Paso" />
         <meta property="og:description" content="Conocé la historia de Bowling de Paso, más de 30 años de diversión en Mar del Plata." />
         <meta property="og:image" content="https://www.bowlingdepaso.com.ar/logo-og.webp" />
-        <meta property="og:url" content="https://www.bowlingdepaso.com.ar/#/historia" />
+        <meta property="og:url" content="https://www.bowlingdepaso.com.ar/historia" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="es_AR" />
         {/* Twitter Card Tags */}
