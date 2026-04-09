@@ -17,6 +17,6 @@ for (const file of files) {
       width: 1440,
       withoutEnlargement: true,
     })
-    .webp({ quality: 75, effort: 6 })
+    .webp({ quality: 100, effort: 6 })
     .toFile(path.join(outputDir, `${base}.webp`))
 }

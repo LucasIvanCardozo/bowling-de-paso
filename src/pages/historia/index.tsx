@@ -25,6 +25,28 @@ export default function Page() {
           name="description"
           content="Descubre la historia de Bowling de Paso en Mar del Plata, desde humildes inicios hasta ser el epicentro del entretenimiento. Crea recuerdos con nosotros!"
         />
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Historia - Bowling de Paso" />
+        <meta property="og:description" content="Conocé la historia de Bowling de Paso, más de 30 años de diversión en Mar del Plata." />
+        <meta property="og:image" content="https://www.bowlingdepaso.com.ar/logo-og.webp" />
+        <meta property="og:url" content="https://www.bowlingdepaso.com.ar/#/historia" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_AR" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Historia - Bowling de Paso" />
+        <meta name="twitter:description" content="Conocé la historia de Bowling de Paso, más de 30 años de diversión en Mar del Plata." />
+        <meta name="twitter:image" content="https://www.bowlingdepaso.com.ar/logo-og.webp" />
+        {/* JSON-LD AboutPage Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Bowling de Paso",
+            "description": "Bowling, pool, arcade y gastronomía en Mar del Plata"
+          }
+        }) }} />
       </Helmet>
       <main className={styles.main}>
         <div ref={ref1} data-isvisible={isV1 ? 'true' : 'false'}>

@@ -44,6 +44,52 @@ function Page() {
           name="description"
           content="Diviértete en nuestro moderno bowling en Mar del Plata. Bolos, aperitivos y diversión para todas las edades. ¡Únete! Abierto de 18hs a 2:00hs."
         />
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Bowling de Paso - Diversión sin límites en Mar del Plata" />
+        <meta property="og:description" content="Bowling, pool, arcade y gastronomía en Córdoba 3766, Mar del Plata. Abierto de 18hs a 2:00hs. ¡Reserva tu mesa!" />
+        <meta property="og:image" content="https://www.bowlingdepaso.com.ar/logo-og.webp" />
+        <meta property="og:url" content="https://www.bowlingdepaso.com.ar/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_AR" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bowling de Paso - Diversión sin límites en Mar del Plata" />
+        <meta name="twitter:description" content="Bowling, pool, arcade y gastronomía en Córdoba 3766, Mar del Plata. Abierto de 18hs a 2:00hs." />
+        <meta name="twitter:image" content="https://www.bowlingdepaso.com.ar/logo-og.webp" />
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Bowling de Paso",
+          "image": "https://www.bowlingdepaso.com.ar/logo-og.webp",
+          "url": "https://www.bowlingdepaso.com.ar",
+          "telephone": "+54 223 536-8630",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Córdoba 3766",
+            "addressLocality": "Mar del Plata",
+            "addressRegion": "Buenos Aires",
+            "postalCode": "7600",
+            "addressCountry": "AR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -38.0177,
+            "longitude": -57.5565
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "18:00",
+            "closes": "02:00"
+          },
+          "priceRange": "$$",
+          "servesCuisine": ["Argentine", "Bar", "Entertainment"],
+          "sameAs": [
+            "https://www.instagram.com/elbowlingdepaso/",
+            "https://www.facebook.com/elbowlingdepaso2442"
+          ]
+        }) }} />
       </Helmet>
 
       {/* Hero Section - Completely Redesigned */}
@@ -53,7 +99,7 @@ function Page() {
         <div className={styles.heroContent}>
           {/* Logo Container */}
           <div ref={logoRef} className={styles.logoContainer} data-visible={logoVisible ? 'true' : 'false'}>
-            <img src={logo} alt="Bowling de Paso - Desde 1988" className={styles.logo} />
+            <img src={logo} alt="Bowling de Paso - Desde 1988" className={styles.logo} width="400" height="200" />
           </div>
 
           {/* Tagline */}
