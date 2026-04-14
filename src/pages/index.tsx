@@ -22,6 +22,7 @@ import genteBrindando from '@/assets/images/section-fun/gente-brindando.webp'
 import trofeo from '@/assets/images/section-fun/trofeo.webp'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import hojaDeLado from '@/assets/images/hojas-left.webp'
 
 function Page() {
   const { season, hours, metaDescription } = useSeasonalSchedule()
@@ -174,6 +175,8 @@ function Page() {
 
       {/* Rest of the content - keeping existing sections below */}
       <article id="conocer" className={styles.article}>
+        <img className={styles.hoja1} src={hojaDeLado} alt="Hojas" />
+        <img className={styles.hoja2} src={hojaDeLado} alt="Hojas" />
         <section className={styles.intro}>
           <div className={styles.introText}>
             <p>Sabemos que lo importante es disfrutar de la compañía mutua.</p>
