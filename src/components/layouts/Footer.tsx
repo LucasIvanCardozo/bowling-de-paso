@@ -5,7 +5,7 @@ import instagram from '@/assets/images/instagramLogo.webp'
 import facebook from '@/assets/images/facebookLogo.webp'
 
 export default function Footer() {
-  const { badge, hours, season } = useSeasonalSchedule()
+  const { hours, season } = useSeasonalSchedule()
   return (
     <div className={styles.container}>
       <div className={styles.socialText} id="contactanos">
